@@ -1,0 +1,109 @@
+config("libares_config") {
+  cflags = [
+    "-Wno-incompatible-pointer-types-discards-qualifiers",
+  ]
+
+  cflags_cc = [
+    "-std=c++11",
+    "-fexceptions",
+    "-Wno-format",
+    "-Wno-pessimizing-move",
+  ]
+}
+
+static_library("libares") {
+  sources = [
+    #"acountry.c",
+    #"adig.c",
+    #"ahost.c",
+    "ares.h",
+    "ares_build.h",
+    "ares_cancel.c",
+    "ares__close_sockets.c",
+    "ares_config.h",
+    "ares_create_query.c",
+    "ares_data.c",
+    "ares_data.h",
+    "ares_destroy.c",
+    "ares_dns.h",
+    "ares_expand_name.c",
+    "ares_expand_string.c",
+    "ares_fds.c",
+    "ares_free_hostent.c",
+    "ares_free_string.c",
+    "ares_getenv.c",
+    "ares_getenv.h",
+    "ares_gethostbyaddr.c",
+    "ares_gethostbyname.c",
+    "ares__get_hostent.c",
+    "ares_getnameinfo.c",
+    "ares_getopt.c",
+    "ares_getopt.h",
+    "ares_getsock.c",
+    "ares_inet_net_pton.h",
+    "ares_init.c",
+    "ares_iphlpapi.h",
+    "ares_ipv6.h",
+    "ares_library_init.c",
+    "ares_library_init.h",
+    "ares_llist.c",
+    "ares_llist.h",
+    "ares_mkquery.c",
+    "ares_nowarn.c",
+    "ares_nowarn.h",
+    "ares_options.c",
+    "ares_parse_aaaa_reply.c",
+    "ares_parse_a_reply.c",
+    "ares_parse_mx_reply.c",
+    "ares_parse_naptr_reply.c",
+    "ares_parse_ns_reply.c",
+    "ares_parse_ptr_reply.c",
+    "ares_parse_soa_reply.c",
+    "ares_parse_srv_reply.c",
+    "ares_parse_txt_reply.c",
+    "ares_platform.c",
+    "ares_platform.h",
+    "ares_private.h",
+    "ares_process.c",
+    "ares_query.c",
+    "ares__read_line.c",
+    "ares_rules.h",
+    "ares_search.c",
+    "ares_send.c",
+    "ares_setup.h",
+    "ares_strcasecmp.c",
+    "ares_strcasecmp.h",
+    "ares_strdup.c",
+    "ares_strdup.h",
+    "ares_strerror.c",
+    "ares_timeout.c",
+    "ares__timeval.c",
+    "ares_version.c",
+    "ares_version.h",
+    "ares_writev.c",
+    "ares_writev.h",
+    "bitncmp.c",
+    "bitncmp.h",
+    "config-dos.h",
+    #"config-win32.h",
+    "inet_net_pton.c",
+    "inet_ntop.c",
+    "setup_once.h",
+    #"windows_port.c",
+  ]
+
+  defines = [
+    "CARES_STATIC", 
+  ]
+
+  include_dirs = [
+    "<(DEPTH)",
+  ]
+
+  deps = [
+  ]
+
+  configs += [
+    ":libares_config",
+  ]
+}

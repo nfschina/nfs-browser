@@ -1,0 +1,42 @@
+[Breakpoint 0]
+Enabled=true
+File=ucimap.c
+Line=222
+Temporary=false
+
+[Breakpoint 1]
+Enabled=true
+File=ucimap-example.c
+Line=219
+Temporary=false
+
+[Breakpoint 2]
+Enabled=true
+File=ucimap-example.c
+Line=112
+Temporary=false
+
+[Breakpoint 3]
+Enabled=true
+File=ucimap-example.c
+Line=259
+Temporary=false
+
+[General]
+DebuggerCmdStr=
+DriverName=GDB
+FileVersion=1
+OptionsSelected=
+ProgramArgs=
+TTYLevel=7
+WorkingDirectory=
+
+[Memory]
+ColumnWidths=80,0
+NumExprs=0
+
+[Watches]
+Expr0=sd
+Expr1=pm->name
+Expr2=om->name
+Expr3=e->name

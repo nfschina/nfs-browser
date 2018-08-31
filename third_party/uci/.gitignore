@@ -1,0 +1,10 @@
+uci
+uci-static
+ucimap-example
+*.[oa]
+*.so*
+*.dylib*
+.*.swp
+.gdb*
+#uci_config.h
+test/save

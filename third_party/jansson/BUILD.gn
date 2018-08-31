@@ -1,0 +1,78 @@
+if (is_win) {
+config("jansson_config") {
+  cflags = [
+    "/wd4706",  # assignment within conditional expression
+  ]
+}
+}
+
+static_library("jansson") {
+  sources = [
+    "src/dump.c",
+    "src/error.c",
+    "src/hashtable.c",
+    "src/hashtable.h",
+    "src/hashtable_seed.c",
+    "src/jansson.h",
+    "src/jansson_config.h",
+    "src/jansson_private.h",
+    "src/load.c",
+    "src/lookup3.h",
+    "src/memory.c",
+    "src/pack_unpack.c",
+    "src/strbuffer.c",
+    "src/strbuffer.h",
+    "src/strconv.c",
+    "src/utf.c",
+    "src/utf.h",
+    "src/value.c",
+  ]
+
+  if (is_win) {
+     sources += [
+       "src/jansson_private_config_win.h",
+     ]
+   } else {
+     sources += [
+       "src/jansson_private_config.h",
+     ]
+   }
+
+  include_dirs = [
+    "src",
+  ]
+
+  if (is_win) {
+     defines = [
+       "HAVE_CONFIG_WIN_H",
+       "HAVE_STDINT_H",
+     ]
+   } else {
+     defines = [
+       "HAVE_CONFIG_H",
+       "HAVE_STDINT_H",
+       "HAVE_SYS_PARAM_H",
+       "HAVE_ENDIAN_H",
+     ]
+   }
+}
+
+if (is_win) {
+  configs += [
+      ":jansson_config",
+  ]
+}
+
+executable("simple_parse") {
+  sources = [
+    "examples/simple_parse.c",
+  ]
+
+  include_dirs = [
+    "src",
+  ]
+
+  deps = [
+    ":jansson",
+  ]
+}

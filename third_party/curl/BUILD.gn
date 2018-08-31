@@ -1,0 +1,296 @@
+libsources = [
+    "src/lib/amigaos.c",
+    "src/lib/asyn-ares.c",
+    "src/lib/asyn-thread.c",
+    "src/lib/base64.c",
+    "src/lib/conncache.c",
+    "src/lib/connect.c",
+    "src/lib/content_encoding.c",
+    "src/lib/cookie.c",
+    "src/lib/curl_addrinfo.c",
+    "src/lib/curl_fnmatch.c",
+    "src/lib/curl_gethostname.c",
+    "src/lib/curl_gssapi.c",
+    "src/lib/curl_memrchr.c",
+    "src/lib/curl_multibyte.c",
+    "src/lib/curl_ntlm.c",
+    "src/lib/curl_ntlm_core.c",
+    "src/lib/curl_ntlm_msgs.c",
+    "src/lib/curl_ntlm_wb.c",
+    "src/lib/curl_rtmp.c",
+    "src/lib/curl_sasl.c",
+    "src/lib/curl_sspi.c",
+    "src/lib/curl_threads.c",
+    "src/lib/dict.c",
+    "src/lib/dotdot.c",
+    "src/lib/easy.c",
+    "src/lib/escape.c",
+    "src/lib/file.c",
+    "src/lib/fileinfo.c",
+    "src/lib/formdata.c",
+    "src/lib/ftp.c",
+    "src/lib/ftplistparser.c",
+    "src/lib/getenv.c",
+    "src/lib/getinfo.c",
+    "src/lib/gopher.c",
+    "src/lib/hash.c",
+    "src/lib/hmac.c",
+    "src/lib/hostasyn.c",
+    "src/lib/hostcheck.c",
+    "src/lib/hostip.c",
+    "src/lib/hostip4.c",
+    "src/lib/hostip6.c",
+    "src/lib/hostsyn.c",
+    "src/lib/http.c",
+    "src/lib/http_chunks.c",
+    "src/lib/http_digest.c",
+    "src/lib/http_negotiate.c",
+    "src/lib/http_negotiate_sspi.c",
+    "src/lib/http_proxy.c",
+    "src/lib/idn_win32.c",
+    "src/lib/if2ip.c",
+    "src/lib/imap.c",
+    "src/lib/inet_ntop.c",
+    "src/lib/inet_pton.c",
+    "src/lib/ldap.c",
+    "src/lib/llist.c",
+    "src/lib/md4.c",
+    "src/lib/md5.c",
+    "src/lib/memdebug.c",
+    "src/lib/mprintf.c",
+    "src/lib/multi.c",
+    "src/lib/netrc.c",
+    "src/lib/non-ascii.c",
+    "src/lib/nonblock.c",
+    "src/lib/openldap.c",
+    "src/lib/parsedate.c",
+    "src/lib/pingpong.c",
+    "src/lib/pipeline.c",
+    "src/lib/pop3.c",
+    "src/lib/progress.c",
+    "src/lib/rawstr.c",
+    "src/lib/rtsp.c",
+    "src/lib/security.c",
+    "src/lib/select.c",
+    "src/lib/sendf.c",
+    "src/lib/share.c",
+    "src/lib/slist.c",
+    "src/lib/smtp.c",
+    "src/lib/socks.c",
+    "src/lib/socks_gssapi.c",
+    "src/lib/socks_sspi.c",
+    "src/lib/speedcheck.c",
+    "src/lib/splay.c",
+    "src/lib/ssh.c",
+    "src/lib/strdup.c",
+    "src/lib/strequal.c",
+    "src/lib/strerror.c",
+    "src/lib/strtok.c",
+    "src/lib/strtoofft.c",
+    "src/lib/telnet.c",
+    "src/lib/tftp.c",
+    "src/lib/timeval.c",
+    "src/lib/transfer.c",
+    "src/lib/url.c",
+    "src/lib/version.c",
+    "src/lib/vtls/axtls.c",
+    "src/lib/vtls/cyassl.c",
+    "src/lib/vtls/darwinssl.c",
+    "src/lib/vtls/gskit.c",
+    "src/lib/vtls/gtls.c",
+    "src/lib/vtls/nss.c",
+    "src/lib/vtls/openssl.c",
+    "src/lib/vtls/polarssl.c",
+    "src/lib/vtls/polarssl_threadlock.c",
+    "src/lib/vtls/schannel.c",
+    "src/lib/vtls/vtls.c",
+    "src/lib/warnless.c",
+    "src/lib/wildcard.c",
+]
+
+if (is_linux) {
+  shared_library("libcurl") {
+    sources = libsources  
+
+    cflags_cc = [
+      "-std=c++11",
+      "-fexceptions",
+    ]
+   
+    sources += [ "config/curl/curlbuild.h" ]  
+
+    
+    sources += [ "config/linux/curl_config.h" ]
+    defines = []  
+
+    defines += [
+      "USE_IPV6",
+      "USE_OPENSSL",
+    ] 
+
+    include_dirs = [
+      "src/lib",
+      "src/include",
+      "../c-ares",
+    ] 
+
+    include_dirs += [
+      "config",
+      "config/curl",
+    ] 
+
+    
+    include_dirs += [ "config/linux" ]
+    defines += [
+        "HAVE_CONFIG_H",
+        "CURL_CA_BUNDLE=\"<!(config/linux/find_curl_ca_bundle.sh)\"",
+    ] 
+
+    deps = [
+      "//third_party/boringssl:boringssl",    
+    ]   
+
+    if(!is_win) {
+        deps += [
+        "//third_party/c-ares:libares",
+      ]
+    }
+  }
+} else if (is_win) {
+  static_library("libcurl") {
+    sources = libsources  
+
+    cflags = [
+      "/wd4706",  # assignment within conditional expression
+    ]
+    
+    cflags_cc = [
+      "-std=c++11",
+      "-fexceptions",
+    ]
+   
+    sources += [ "config/curl/curlbuild.h" ]  
+
+    sources += [ "config/windows/curl_config.h" ]
+
+    defines = [ "CURL_STATICLIB" ]
+
+    defines += [
+      "USE_IPV6",
+      "USE_OPENSSL",
+    ] 
+
+    include_dirs = [
+      "src/lib",
+      "src/include",
+      "../c-ares",
+    ] 
+
+    include_dirs += [
+      "config",
+      "config/curl",
+    ] 
+
+    include_dirs += [ "config/windows" ]
+    defines += [
+       "HAVE_CONFIG_H",
+      "CURL_CA_BUNDLE=\"<!(config/windows/find_curl_ca_bundle.sh)\"",
+    ]
+
+    deps = [
+      "//third_party/boringssl:boringssl",
+      
+    ]
+  }  
+}
+
+executable("curl") {
+ sources = [
+    "config/dummy_tool_hugehelp.c",
+    "src/src/tool_binmode.c",
+    "src/src/tool_bname.c",
+    "src/src/tool_cb_dbg.c",
+    "src/src/tool_cb_hdr.c",
+    "src/src/tool_cb_prg.c",
+    "src/src/tool_cb_rea.c",
+    "src/src/tool_cb_see.c",
+    "src/src/tool_cb_wrt.c",
+    "src/src/tool_cfgable.c",
+    "src/src/tool_convert.c",
+    "src/src/tool_dirhie.c",
+    "src/src/tool_doswin.c",
+    "src/src/tool_easysrc.c",
+    "src/src/tool_formparse.c",
+    "src/src/tool_getparam.c",
+    "src/src/tool_getpass.c",
+    "src/src/tool_help.c",
+    "src/src/tool_helpers.c",
+    "src/src/tool_homedir.c",
+    "src/src/tool_libinfo.c",
+    "src/src/tool_main.c",
+    "src/src/tool_metalink.c",
+    "src/src/tool_mfiles.c",
+    "src/src/tool_msgs.c",
+    "src/src/tool_operate.c",
+    "src/src/tool_operhlp.c",
+    "src/src/tool_panykey.c",
+    "src/src/tool_paramhlp.c",
+    "src/src/tool_parsecfg.c",
+    "src/src/tool_setopt.c",
+    "src/src/tool_sleep.c",
+    "src/src/tool_urlglob.c",
+    "src/src/tool_util.c",
+    "src/src/tool_vms.c",
+    "src/src/tool_writeenv.c",
+    "src/src/tool_writeout.c",
+    "src/src/tool_xattr.c",
+  ]
+
+  sources += [ "config/curl/curlbuild.h" ]
+  if(is_linux) {
+    sources += [ "config/linux/curl_config.h" ]
+  } else if(is_mac) {
+    sources += [ "config/mac/curl_config.h" ]
+  } else if(is_win) {
+     sources += [ "config/windows/curl_config.h" ]
+  }
+
+  defines = [
+    "USE_IPV6",
+    "USE_OPENSSL",
+  ]
+
+  include_dirs = [ 
+    "src/lib",
+    "src/src",
+  ]
+
+  include_dirs += [
+    "config",
+    "config/curl",
+  ]
+
+   if(is_linux) {
+    include_dirs += [ "config/linux" ]
+    defines += [
+       "HAVE_CONFIG_H",
+      "CURL_CA_BUNDLE=\"<!(config/linux/find_curl_ca_bundle.sh)\"",
+    ]
+  } else if(is_mac) {
+    include_dirs += [ "config/mac" ]
+    defines += [
+     "HAVE_CONFIG_H",
+      "CURL_CA_BUNDLE=\"<!(config/mac/find_curl_ca_bundle.sh)\"",
+    ]
+  } else if(is_win) {
+     include_dirs += [ "config/windows" ]
+     defines += [
+        "HAVE_CONFIG_H",
+       "CURL_CA_BUNDLE=\"<!(config/windows/find_curl_ca_bundle.sh)\"",
+     ]
+  }
+
+  deps = [
+    ":libcurl",
+  ]
+}

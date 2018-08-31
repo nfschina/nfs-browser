@@ -1,0 +1,14 @@
+{
+  "contents": {
+    "LICENSE.TXT": "3b83ef96387f14655fc854ddc3c6bd57", 
+    "include\\syzygy\\kasko\\api\\client.h": "0fccea599913bf55291920c519292344", 
+    "include\\syzygy\\kasko\\api\\crash_key.h": "ae3ea5d70e45e651c439685f868a8145", 
+    "include\\syzygy\\kasko\\api\\kasko_export.h": "6446f8e87cde8ddec67a47c3f50deb82", 
+    "include\\syzygy\\kasko\\api\\minidump_type.h": "8e168787b2a2b2d3b9220f4c6827634d", 
+    "include\\syzygy\\kasko\\api\\reporter.h": "85570a17e0d0a0bd4cf26df434a46d57", 
+    "kasko.dll": "51a78a77417d1e67f44ea156d199d1cb", 
+    "kasko.dll.lib": "9c0250c935b1c58cceb220972b04ce76", 
+    "kasko.dll.pdb": "ba2af0d275536b05c7016e7985aeecc3"
+  }, 
+  "revision": "266a18d9209be5ca5c5dcd0620942b82a2d238f3"
+}

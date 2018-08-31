@@ -1,0 +1,28 @@
+config ClsfProfile profile1
+    option ID               1
+    option Action           1
+    option ActionExclude    0
+    option Priority         '3 3'
+    option SrcIpFilter      'ip12135415163 ip12135415164'
+    option DstIpFilter      'ip1213111161'
+    option DstPortFilter    'port22235415163'
+    option ProtoFilter      '3 101'
+    option SrcPortFilter    ''
+    option L7Filter         102 
+    option Engine           1
+ 
+config ObjMgmtIp ip12135415163
+    option Name         aaa
+    option Rules        '1.1.1.1/24 2.2.2.2-2.2.2.6'
+ 
+config ObjMgmtIp ip12135415164
+    option Name         bbb
+    option Rules        '3.3.3.3/24 4.4.4.4-4.4.4.6'
+
+config ObjMgmtIp ip1213111161
+    option Name         aaa
+    option Rules        '5.5.5.5/24 6.6.6.6-6.6.6.6'
+        
+config ObjMgmtPort port22235415163
+    option Name        ccc
+    option Rules       '80-90 8080'

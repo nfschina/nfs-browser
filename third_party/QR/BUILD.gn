@@ -1,0 +1,66 @@
+# Copyright 2014 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+static_library("QR") {
+  sources = [
+        "src/bitstream.h",
+        #"src/bitstream.c",
+        "src/mask.h",
+        #"src/mask.c",
+        "src/mmask.h",
+        #"src/mmask.c",
+        "src/mqrspec.h",
+        #"src/mqrspec.c",
+        #"src/qrencode.c",
+        "src/qrencode.h",
+        "src/qrinput.h",
+        #"src/qrinput.c",
+        "src/qrspec.h",
+        #"src/qrspec.c",
+        "src/rscode.h",
+        #"src/rscode.c",
+        "src/split.h",
+        #"src/split.c",
+        "src/config.h",
+        "src/qrenc.h",
+        #"src/qrenc.c",
+  ]
+
+  if (is_win) {
+    sources += [
+      "../../out/Release/obj/third_party/QR/QR/bitstream.obj",
+      "../../out/Release/obj/third_party/QR/QR/mask.obj",
+      "../../out/Release/obj/third_party/QR/QR/mmask.obj",
+      "../../out/Release/obj/third_party/QR/QR/mqrspec.obj",
+      "../../out/Release/obj/third_party/QR/QR/qrencode.obj",
+      "../../out/Release/obj/third_party/QR/QR/qrinput.obj",
+      "../../out/Release/obj/third_party/QR/QR/qrspec.obj",
+      "../../out/Release/obj/third_party/QR/QR/rscode.obj",
+      "../../out/Release/obj/third_party/QR/QR/split.obj",
+      "../../out/Release/obj/third_party/QR/QR/qrenc.obj",
+    ]
+  } else {
+    sources += [
+      "../../out/Release/obj/third_party/QR/QR/bitstream.o",
+      "../../out/Release/obj/third_party/QR/QR/mask.o",
+      "../../out/Release/obj/third_party/QR/QR/mmask.o",
+      "../../out/Release/obj/third_party/QR/QR/mqrspec.o",
+      "../../out/Release/obj/third_party/QR/QR/qrencode.o",
+      "../../out/Release/obj/third_party/QR/QR/qrinput.o",
+      "../../out/Release/obj/third_party/QR/QR/qrspec.o",
+      "../../out/Release/obj/third_party/QR/QR/rscode.o",
+      "../../out/Release/obj/third_party/QR/QR/split.o",
+      "../../out/Release/obj/third_party/QR/QR/qrenc.o",
+    ]
+  }
+
+  include_dirs = [
+      "src/lib",
+  ]
+
+  deps = [
+     "//third_party/boringssl:boringssl",
+  ]
+
+}

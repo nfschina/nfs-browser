@@ -1,0 +1,93 @@
+config("vtapi_config") {
+  cflags = [
+    #if !defined(OS_WIN)
+    "-Wno-sign-compare",
+    #endif
+  ]
+}
+
+static_library("vtapi") {
+  sources = [
+    "lib/VtApiPage.c",
+    "lib/VtApiPage.h",
+    "lib/VtComments.c",
+    "lib/VtComments.h",
+    "lib/VtDebug.c",
+    "lib/VtDebug.h",
+    "lib/VtDomain.c",
+    "lib/VtDomain.h",
+    "lib/VtFile.c",
+    "lib/VtFileDist.c",
+    "lib/VtFileDist.h",
+    "lib/VtFile.h",
+    "lib/VtIpAddr.c",
+    "lib/VtIpAddr.h",
+    "lib/VtObject.c",
+    "lib/VtObject.h",
+    "lib/VtResponse.c",
+    "lib/VtResponse.h",
+    "lib/VtUrl.c",
+    "lib/VtUrlDist.c",
+    "lib/VtUrlDist.h",
+    "lib/VtUrl.h",
+    "lib/c-vtapi_config.h",
+    "lib/vtcapi_common.h",
+    "lib/cJSON.c",
+    "lib/cJSON.h",
+  ]
+
+  include_dirs = [
+    "//",
+  ]
+
+  deps = [
+    "//third_party/curl:libcurl",
+    "//third_party/jansson",
+  ]
+
+  defines = [
+    "HAVE_CONFIG_H",
+    "DISABLE_HTTPS_VALIDATION"
+  ]
+
+  if (is_win) {
+    defines += [
+
+    ]
+  }
+
+  configs += [
+    ":vtapi_config",
+  ]
+}
+
+if (is_win) {
+  configs += [
+    "//build/config/compiler:no_size_t_to_int_warning",
+  ]
+}
+
+static_library("vtapi_url") {
+  sources = [
+    "examples/url.c",
+  ]
+
+  include_dirs = [
+    "//",
+    "lib",
+  ]
+
+  deps = [
+    ":vtapi",
+  ]
+}
+
+copy("murl_gen") {
+  sources = [
+    "db/murl.db",
+  ]
+
+  outputs = [
+    "$root_out_dir/Murl/murl.db",
+  ]
+}

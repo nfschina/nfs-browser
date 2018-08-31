@@ -1,0 +1,12 @@
+config ClsfProfile profile1
+    option ID               1
+    option Action           1
+    option ActionExclude    0
+    option Priority         '3 3'
+    option SrcIpFilter      ''
+    option DstIpFilter      ''
+    option DstPortFilter    ''
+    option ProtoFilter      ''
+    option SrcPortFilter    ''
+    list   TimeFilter ""
+    option Engine           1

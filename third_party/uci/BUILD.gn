@@ -1,0 +1,22 @@
+config("uci_config") {
+  if (is_linux) {
+     cflags = [ "-Wno-implicit-function-declaration" ]
+  }
+}
+
+static_library("uci") {
+  sources = [
+     "delta.c",
+     "file.c",
+     "libuci.c",
+     "ucimap.c",
+     "ucimap.h",
+     "uci_config.h",
+     "uci_internal.h",
+     "uci.h",
+     "util.c",
+  ]
+  configs -= [ "//build/config/compiler:chromium_code" ]
+  configs += [ "//build/config/compiler:no_chromium_code" ]
+  public_configs = [ ":uci_config" ]
+}
