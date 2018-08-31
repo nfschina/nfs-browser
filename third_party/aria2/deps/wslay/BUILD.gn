@@ -1,0 +1,21 @@
+static_library("wslay") {
+  sources = [
+    "lib/wslay_frame.h",
+    "lib/wslay_queue.h",
+    "lib/wslay_net.c",
+    "lib/includes/wslay/wslay.h",
+    "lib/includes/wslay/wslayver.h",
+    "lib/wslay_net.h",
+    "lib/wslay_frame.c",
+    "lib/wslay_event.h",
+    "lib/wslay_event.c",
+    "lib/wslay_queue.c",
+  ]
+
+  defines = [ "HAVE_CONFIG_H" ]
+
+  include_dirs = [
+    "./",
+    "lib/includes",
+  ]
+}

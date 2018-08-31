@@ -1,0 +1,677 @@
+commit 5cf3d369cd9674c4a4ca3c05372a0d0a985f1da3
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Update bash_completion
+
+commit b9200518505c0056e08840032092f258e08c6c0b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Bump up version number to 1.18.9
+
+commit 4e5433e7aad9a892452688635f53bb837db00839
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Update android third party library
+
+commit 25ecfd86f1eca878b0a76e2728e48756284cf7b5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Update mingw third party libraries
+
+commit e1739c8ee79b8ac5a47fc6d8f0671ee7b517173d
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Fix compile error without SSL/TLS enabled
+
+commit feca60fce63ffd7c7b165f9660249714ebfd8f0b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-02-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-02-01
+
+    Update NEWS
+
+commit de37dbf13daafef815f6b45bb31b1c5a3da96f5f
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2015-01-26
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2015-01-26
+
+    Remove some left-over code from converting a test.
+    
+    Checking once with CPPUNIT_ASSERT_MESSAGE should suffice.
+
+commit d5d21d20d7e8ff41e9a445544a2e4ccb7b3fd114
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-26
+
+    Support HTTP date ending "+0000" as well as "GMT".
+
+commit b5f22ba216c35e517c01f508b2765df0a5fa18e2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-25
+
+    Use https for git clone link
+
+commit 81bdd5f61a8f8da53e22d68190be700902b7dbae
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2015-01-20
+
+    Revise getRandom facilities
+    
+    Use one of the following to provide random bytes:
+    - Windows CryptGenRandom
+    - Linux getrandom (syscall interface to urandom, without nasty corner
+      cases such as file descriptor exhaustion or re-linked /dev/urandom)
+    - std::device_random (C++ random device, which usually will be urandom)
+    
+    This also equalizes util::getRandom and SimpleRandomizer (the former
+    will now use the latter) instead of having essentially two different
+    PRNG interfaces with potentially different quality.
+    
+    Closes GH-320
+
+commit 747131a06c1f1d92a5312a103f4446fabedb6cf7
+Merge: 9d47306 bec6461
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-16
+
+    Merge branch 'dfandrich-comments'
+
+commit bec646126209c4893a2cde92a4ef43b6e33b5050
+Merge: 9d47306 0538aa4
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-16
+
+    Merge branch 'comments' of https://github.com/dfandrich/aria2 into dfandrich-comments
+
+commit 9d473060ee3d9faa04563259d05a754015641d80
+Merge: d0c20e1 8c53e37
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-16
+
+    Merge branch 'dfandrich-master'
+
+commit 0538aa40da9eb22a20e124799a00dc519742b86a
+Author:     Dan Fandrich <dan@coneharvesters.com>
+AuthorDate: 2015-01-16
+Commit:     Dan Fandrich <dan@coneharvesters.com>
+CommitDate: 2015-01-16
+
+    Fixed some typos in code comments
+
+commit 8c53e37c214aad611840fbb1ce9bca0d13e926ac
+Author:     Dan Fandrich <dan@coneharvesters.com>
+AuthorDate: 2015-01-16
+Commit:     Dan Fandrich <dan@coneharvesters.com>
+CommitDate: 2015-01-16
+
+    Added debug log of all Metalink URLs with final priorities
+
+commit d0c20e158e024ef11faf1b6a52534cf2d11750e1
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-13
+
+    Fix typo
+
+commit 06bde9f70cb38412b60c55a44613932b01b07e7d
+Merge: 226d28f 8bbb175
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-13
+
+    Merge branch 'ITriskTI-patch-3'
+
+commit 8bbb17561f86830c2dbe3c5a87ae3364cc78d52f
+Merge: 226d28f b8e6ae2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-13
+
+    Merge branch 'patch-3' of https://github.com/ITriskTI/aria2 into ITriskTI-patch-3
+
+commit 226d28fcd7b7491c97e480d166f5872580914082
+Merge: 7e7b628 1aa4f33
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-13
+
+    Merge branch 'ITriskTI-patch-1'
+
+commit b8e6ae2a555777f0950e6382d59e0c7c49a66ef5
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2015-01-13
+
+    Update aria2c.rst
+
+commit 9c78825fa50555d9cf141c3088ea843ba842e275
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2015-01-13
+
+    Update aria2c.rst
+
+commit 1aa4f333335c1db07adf6f6e92dac6c4e166d623
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2015-01-13
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2015-01-13
+
+    Fix typo
+
+commit 7e7b628cc2886b93025b49af81f27a9a9381e6e7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-12
+
+    Use gcc-4.9 and android-16 API level for android build
+
+commit 7bbf209a02de3ed1083d29baba41cd2fd3ac5886
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-12
+
+    Escape \ in rst doc
+
+commit 9f4e76d1b72fbb927422fb0735354e9e492475b8
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-12
+
+    Fix indentation in usage output
+
+commit c653c72dc84b7c5fe99f2aa189e9cf1da80a9ed5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-12
+
+    Add --bt-force-encryption option
+    
+    This option requires BitTorrent message payload encryption with
+    arc4. This is a shorthand of --bt-requre-crypto
+    --bt-min-crypto-level=arc4.  If true is given, deny legacy BitTorrent
+    handshake and only use Obfuscation handshake and always encrypt
+    message payload. This option defaults to false.
+
+commit cc36df2625c1fee8e4f013becff07d3b4c38b12d
+Merge: 590aa21 0895008
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2015-01-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2015-01-05
+
+    Merge branch 'sslwarn'
+
+commit 590aa21c68b854a7acdacc34d5a1f10f73483432
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-30
+
+    Add backward-compatible libuv defs
+
+commit 0895008e5c542297162517f11809e8f0aacbd78d
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-29
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-30
+
+    Fix SSLv3 warnings being issued on connection reuse.
+    
+    And also improve tlsHandshake code a bit in the process, mostly by being
+    more explicit about error conditions.
+
+commit e0812d5ad15391758fa5ad635c0cd0226409bee1
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-13
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-29
+
+    Fix another printf related warning
+
+commit ff2a630efe317f3610f4ab91a59731f8971a50ee
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-26
+
+    GNUTLS: Remove ifdef for GNUTLS_TLS* since they are not macros
+    
+    Since they are not macros, we get always TLS_PROTO_NONE (otherwise you
+    are using SSLv3 and you will get warning nonetheless) and get warning.
+
+commit d755df25057e6dbd33bb6fd92a7a65751d5e22e7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-26
+
+    TLS: Fix memory leak with OpenSSL
+    
+    Based on the patch submitted by midnight2k
+
+commit 962b8ccb05d85188b9c061c2e70d61a044d04eec
+Merge: b0cdbfe 701e5df
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-15
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-15
+
+    Merge branch 'warn-ssl3'
+
+commit 701e5df7908d12cfecb19ff1749cd5d01d903024
+Merge: 48bcb47 b0cdbfe
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-15
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-15
+
+    Merge branch 'master' into warn-ssl3
+
+commit 48bcb47a30c1a3fc41bfba23745a3b864fe5691a
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-14
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-14
+
+    Refine messages to include peer info
+
+commit 3c8704178a94a9ae3abde238aa4c369efd5f01a1
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-13
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-14
+
+    Move warn logic into SocketCore
+    
+    Also fiddle a bit with the WinTLS implementation, forcing "strong"
+    crypto only for > SSLv3.
+
+commit b0cdbfe9e72f0c0cb69ba7bb9fa1a18a21be490e
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-13
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-13
+
+    Fix ASYNC_DNS code in LibuvEventPoll
+
+commit c5c38bf3a4f6193ecba814d47a305872b6ea5454
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-12
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-12
+
+    Warn about insecure SSL connections.
+    
+    Fixed GH-313
+
+commit 811c0f758da0d161b278fc6b0da333459dd220b4
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-12
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-12
+
+    Port poll changes to LibuvEventPoll
+
+commit 6f9ea555c28c1d48f2967aa735d9bba5fb2b31f4
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-12
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-12
+
+    Fix compiler warning
+
+commit 46aa2f6af363106f244ad1b7b16b1f1f1af5c66e
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-12-12
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-12
+
+    Fix AppleTLSContext protocol selection
+
+commit 0e5ed611d1215710eece24d4ccac7ba28d65aebd
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2014-09-10
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2014-12-11
+
+    AppleTLS: Set error state when handshake fails...
+    
+    + some minor formatting issues.
+
+commit 24a472850ee8ed43ad1dae4864cc48fdf25e5967
+Merge: 73d752f 634e1fe
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-06
+
+    Merge branch 'ITriskTI-patch-1'
+
+commit 634e1fe73f92b47b424445640b7cfad7d37b24fc
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2014-12-06
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2014-12-06
+
+    Update aria2c.rst
+
+commit 73d752fb1cd01a9092191c9ac52ddb8fa378065f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-06
+
+    Add --min-tls-version option
+    
+    The --min-tls-version option specifies minimum SSL/TLS version to
+    enable. Possible Values: SSLv3, TLSv1, TLSv1.1, TLSv1.2 Default: TLSv1
+
+commit 62fba76666648b4d907098675779585a367e6f5e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-12-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-12-05
+
+    Compile with old OpenSSL
+
+commit 6d3bd609051567719f923bc1e0c723991b2f53f5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-11-29
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-11-29
+
+    LibgnuTLSSession: Disable SSLv3
+
+commit 71d842431885f4ef5e5948c3464ad81c6bd8531e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-11-29
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-11-29
+
+    LibsslTLSContext: Disable SSLv3 and enable ECDHE cipher suites
+
+commit bb6fae2f00823f44f4d6f013a2d3077aeeab9c59
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-11-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-11-14
+
+    LibsslTLSSession: Strict clean shutdown detection
+
+commit ae50b93795de54e8706cafe7bf68488efcef0519
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-27
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-27
+
+    Fix typo
+
+commit d47a37eeda507883dad84428cc3c1b35c9f2b779
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-19
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-19
+
+    Add Dockerfile.mingw
+    
+    Dockerfile.mingw builds aria2 Windows binary.  It is probably the
+    easiest way to build the Windows binary.
+
+commit 11859720421189f44f64703fc478b9d8d492bd84
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-18
+
+    Update .gitignore
+
+commit 2cec9df2a2edb84855515c6161d918b8f8842b35
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-16
+
+    Fix crash when JSON batch response vector is empty
+
+commit 3b68e1d08cc1842788bdf6346cd0e2aa50fbeca7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-16
+
+    Fix doc: Wrong rpc secret token prefix
+
+commit 46d46442673c3746b0844b64c5f47eb62a3e364e
+Merge: f72a303 1990291
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-14
+
+    Merge branch 'ITriskTI-patch-1'
+
+commit 199029143b4fdef534941c86dbbd855339f1feb5
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2014-10-13
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2014-10-13
+
+    Update aria2c.rst
+
+commit f72a303b8deb702a2ea4f63280302f88741da581
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-14
+
+    Add --bt-detach-seed-only option
+    
+    This option excludes seed only downloads when counting concurrent
+    active downloads (-j option).  This means that if -j3 is given and
+    this option is turned on and 3 downloads are active and one of those
+    enters seed mode, then it is excluded from active download count (thus
+    it becomes 2), and the next download waiting in queue gets started.
+    But be aware that seeding item is still recognized as active download
+    in RPC method.
+
+commit 09d79565376c03b3e735793703c1dc185d413c31
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-10
+
+    mingw: Use MoveFileExW for better atomic move
+
+commit 24e3822a10fa3e829476c57e201eb739f5712206
+Merge: 4d19045 d6fcc50
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-06
+
+    Merge branch 'ITriskTI-patch-1'
+
+commit d6fcc50ebd21f2552cc03a818f50b5b8de1850c7
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2014-10-05
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2014-10-05
+
+    Update aria2c.rst
+
+commit 4d19045c2774099a90807316f95d04f6d649562c
+Merge: ddee21c 784d0e5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-05
+
+    Merge branch 'elieux-master'
+
+commit 784d0e5e519ca53ed3741816492c0a5318e423e5
+Author:     David Macek <david.macek.0@gmail.com>
+AuthorDate: 2014-10-05
+Commit:     David Macek <david.macek.0@gmail.com>
+CommitDate: 2014-10-05
+
+    Work around libintl's vprintf macro messing with OutputFile::vprintf
+
+commit ddee21ce9611f4551c72df1d54e4ef510c74e04f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-10-04
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-10-04
+
+    doc: Fix default value of --peer-id-prefix
+
+commit d8cde1f499a6c4ab2313ed400ffe346e861c315f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-16
+
+    Rewrite auto_deleter_r with defer function template
+
+commit fa5998ba8535cdf51d204b86ff1290a4a18b2ca0
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-16
+
+    Rewrite expression template to make it a bit easier
+
+commit b63c1dce08e15ef7a533c309ac607fa2d11a96f6
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-15
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-15
+
+    SessionSerializer: Use std::unique_ptr instead of std::shared_ptr
+
+commit 306d92a1dac8a712a6279c19186dfc0ec189eb44
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-15
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-15
+
+    Move req
+
+commit 9a931e7c61e1fa7ec7fab7a3771d2859dea835ff
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-15
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-15
+
+    Fix crash on OSX when proxy is used
+    
+    See GH-275
+
+commit 5e7d8fc9a47e499219ed144bf6db6e5bf22cbfdd
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-14
+
+    Update android build doc
+
+commit 9b84727324168f4d781ab5c69f627603a219eb92
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Use std::make_shared and make_unique where possible, part 2
+
+commit 596e5c616218c9681adf4eb45077608510e2876e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Refactor event poll classes so that we don't have to allocate memory on query
+    
+    I left Port and libuv classes, since I don't have them compiled.
+    So they were updated minimally.
+
+commit f55c16c7edeb319a82217a91a87a35cddfd606b0
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Use std::unique_ptr for DHTBucketTree's left and right pointers
+
+commit e18e8aeeaa2c24591b0ebb89984cbdc30a0f25a8
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Support Adler32 checksum
+    
+    Adler32 checksum is available for --checksum option and hash element
+    in Metalink files.  Currently, we use Adler32 implementation in Zlib.
+
+commit d91f7dc721dbbbffd1b0ab3b3cd889fdaa67cf86
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Use lambda
+
+commit 2807258279d8ddbef01ca1c20a87c14aa084620c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-13
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-13
+
+    Use std::make_shared and make_unique where possible, part 1
+
+commit bee7a8317c602a37066a7b3391b5134f31e3a5ff
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2014-09-12
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2014-09-12
+
+    Update doc
