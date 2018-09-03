@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit latest_public_release="0" current_release="1" output_all_resource_defines="false">
+  <outputs>
+    <output filename="grit/webui_resources_nfs.h" type="rc_header">
+      <emit emit_type='prepend'></emit>
+    </output>
+    <output filename="grit/webui_resources_nfs_map.cc"
+            type="resource_file_map_source" />
+    <output filename="grit/webui_resources_nfs_map.h" type="resource_map_header" />
+    <output filename="webui_resources_nfs.pak" type="data_package" />
+  </outputs>
+  <release seq="1">
+    <includes>
+      <!-- search engine favicon -->
+      <include name="IDR_CDOS_SEARCH_BAIDU" file="images/search/search-baidu.png" type="BINDATA" />
+      <include name="IDR_CDOS_SEARCH_BING" file="images/search/search-bing.png" type="BINDATA" />
+      <include name="IDR_CDOS_SEARCH_DEFAULT" file="images/search/search.png" type="BINDATA" />
+      <include name="IDR_CDOS_SEARCH_GOOGLE" file="images/search/search-google.png" type="BINDATA" />
+      <include name="IDR_CDOS_SEARCH_SOGOU" file="images/search/search-sogou.png" type="BINDATA" />
+      <include name="IDR_CDOS_SEARCH_YAHOO" file="images/search/search-yahoo.png" type="BINDATA" />
+
+      <!-- thumbnails -->
+      <include name="IDR_CDOS_THUMB_BAIDU" file="images/thumbnails/baidu.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_DEFAULT" file="images/thumbnails/none.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_IQIYI" file="images/thumbnails/iqiyi.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_JD" file="images/thumbnails/jd.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_QQZONE" file="images/thumbnails/qqzone.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_TAOBAO" file="images/thumbnails/taobao.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_WEIBO" file="images/thumbnails/weibo.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_XINLANG" file="images/thumbnails/xinlang.png" type="BINDATA" />
+      <include name="IDR_CDOS_THUMB_YOUKU" file="images/thumbnails/youku.png" type="BINDATA" />
+
+      <include name="IDR_CDOS_THUMB_NTP_FAVICON" file="images/thumbnails/ntp_favicon.ico" type="BINDATA" />
+      <include name="IDR_CDOS_NTP_FAVICON_PNG" file="images/thumbnails/ntp_favicon.png" type="BINDATA" />
+
+      <!-- incognito -->
+      <include name="IDR_CDOS_INCOGNITO_LOGO" file="images/incognito_splash.png" type="BINDATA" />
+
+      <include name="IDR_CDOS_WAIT" file="images/wait.gif" type="BINDATA" />
+    </includes>
+    <structures>
+      <structure name="IDR_CDOS_JS_JQUERY" file="js/jquery.js" type="chrome_html" />
+    </structures>
+  </release>
+</grit>

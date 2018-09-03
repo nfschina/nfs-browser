@@ -1,0 +1,13 @@
+
+source_set("nfs_video") {
+  sources = [
+    "nfs_video_api.cc",
+    "nfs_video_api.h",
+  ]
+
+  deps = [
+    "//content/public/browser",
+    "//content/public/common",
+    "//extensions/common/api",
+  ]
+}

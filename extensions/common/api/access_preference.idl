@@ -1,0 +1,10 @@
+// Use the <code>chrome.accessPreference</code> API for extension/webui to get preferences.
+namespace accessPreference{
+    callback GetPreferenceCallback = void(boolean result);
+
+    interface Functions {
+      //Get bool type preferences.
+      static void GetBoolean(DOMString key, GetPreferenceCallback callback);
+    };
+
+};

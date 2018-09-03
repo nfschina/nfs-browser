@@ -1,0 +1,25 @@
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// Use the <code>chrome.nfs.video</code> API for nfs video popup window resolution.
+namespace nfs.video{
+
+    dictionary Options {
+        long tabId;
+    };
+
+    dictionary VideoPopupWindowInfo {
+        DOMString info;
+    };
+
+    callback IsVideoPopupWindowCallback = void(boolean isVideoPopupWindow);
+    callback VideoPopupWindowInfoCallback = void(VideoPopupWindowInfo videoPopupWindowInfo);
+
+    interface Functions {
+        static void popupVideoView(Options options);
+        static void isVideoPopupWindow(Options options, IsVideoPopupWindowCallback isVideoPopupWindowCallback);
+        static void setVideoPopupWindowInfo(Options options, VideoPopupWindowInfo videoPopupWindowInfo);
+        static void getVideoPopupWindowInfo(Options options, VideoPopupWindowInfoCallback videoPopupWindowInfoCallback);
+    };
+
+};

@@ -1,0 +1,14 @@
+# Copyright 2016 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+preinstall_crx_files = [
+      "extensions",
+]
+
+copy("pre_install") {
+    sources = preinstall_crx_files
+    outputs = [
+      "$root_out_dir/{{source_file_part}}",
+    ]
+}

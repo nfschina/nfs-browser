@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- nfsbrowser specific structure (included from ui_resources.grd). -->
+<grit-part>
+  <!-- shadow_frame.cc used shadow pictures-->
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_B" file="shadow/shadow_bottom.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_BL" file="shadow/shadow_bottom_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_BR" file="shadow/shadow_bottom_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_L" file="shadow/shadow_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_R" file="shadow/shadow_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_T" file="shadow/shadow_top.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_TL" file="shadow/shadow_top_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHADOW_TR" file="shadow/shadow_top_right.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_B" file="shadow/messagebox_shadow_bottom.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_BL" file="shadow/messagebox_shadow_bottom_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_BR" file="shadow/messagebox_shadow_bottom_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_L" file="shadow/messagebox_shadow_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_R" file="shadow/messagebox_shadow_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_T" file="shadow/messagebox_shadow_top.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_TL" file="shadow/messagebox_shadow_top_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_MESSAGE_BOX_SHADOW_TR" file="shadow/messagebox_shadow_top_right.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_B" file="shadow/location_bar_bottom.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_BL" file="shadow/location_bar_bottom_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_BR" file="shadow/location_bar_bottom_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_L" file="shadow/location_bar_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_R" file="shadow/location_bar_right.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_T" file="shadow/location_bar_top.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_TL" file="shadow/location_bar_top_left.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCATIONBAR_SHADOW_TR" file="shadow/location_bar_top_right.png" />
+
+  <!-- window control -->
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE" file="window_control/window_close_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE_H" file="window_control/window_close_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE_P" file="window_control/window_close_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX" file="window_control/window_max_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX_P" file="window_control/window_max_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX_H" file="window_control/window_max_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN" file="window_control/window_min_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN_P" file="window_control/window_min_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN_H" file="window_control/window_min_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE" file="window_control/window_restore_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE_P" file="window_control/window_restore_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE_H" file="window_control/window_restore_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_THEME_GALLERY_N" file="window_control/theme_gallery_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_THEME_GALLERY_H" file="window_control/theme_gallery_h.png" />
+   <!-- dark -->
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE_DARK" file="window_control/window_close_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE_H_DARK" file="window_control/window_close_h_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_CLOSE_P_DARK" file="window_control/window_close_p_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX_DARK" file="window_control/window_max_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX_P_DARK" file="window_control/window_max_p_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MAX_H_DARK" file="window_control/window_max_h_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN_DARK" file="window_control/window_min_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN_P_DARK" file="window_control/window_min_p_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_MIN_H_DARK" file="window_control/window_min_h_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE_DARK" file="window_control/window_restore_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE_P_DARK" file="window_control/window_restore_p_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_FRAME_RESTORE_H_DARK" file="window_control/window_restore_h_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_THEME_GALLERY_N_DARK" file="window_control/theme_gallery_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_THEME_GALLERY_H_DARK" file="window_control/theme_gallery_h_dark.png" />
+
+    <!-- web video window control -->
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_CLOSE" file="window_control/web_video_close_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_CLOSE_H" file="window_control/web_video_close_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_CLOSE_P" file="window_control/web_video_close_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MAX" file="window_control/web_video_max_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MAX_P" file="window_control/web_video_max_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MAX_H" file="window_control/web_video_max_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MIN" file="window_control/web_video_min_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MIN_P" file="window_control/web_video_min_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_MIN_H" file="window_control/web_video_min_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_RESTORE" file="window_control/web_video_restore_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_RESTORE_P" file="window_control/web_video_restore_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_FRAME_RESTORE_H" file="window_control/web_video_restore_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_PIN" file="window_control/web_video_pin_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_PIN_H" file="window_control/web_video_pin_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_PIN_P" file="window_control/web_video_pin_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_UNPIN" file="window_control/web_video_unpin_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_UNPIN_P" file="window_control/web_video_unpin_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_UNPIN_H" file="window_control/web_video_unpin_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_RETURN" file="window_control/web_video_return_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_RETURN_P" file="window_control/web_video_return_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_WEB_VIDEO_RETURN_H" file="window_control/web_video_return_h.png" />
+
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_UNLOGIN" file="window_control/browser_btn_unlogin_normal.png" />
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_UNLOGIN_H" file="window_control/browser_btn_unlogin_hover.png" />
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_UNLOGIN_P" file="window_control/browser_btn_unlogin_press.png" />
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_SYNC" file="window_control/browser_btn_sync_normal.png" />
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_SYNC_P" file="window_control/browser_btn_sync_press.png" />
+   <structure type="chrome_scaled_image" name="IDD_ACCOUNT_SYNC_H" file="window_control/browser_btn_sync_hover.png" />
+
+   <!-- tab -->
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_N" file="tab_close_n.png" />
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_H" file="tab_close_h.png" />
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_P" file="tab_close_p.png" />
+   <structure type="chrome_scaled_image" name="IDD_NTP_FAVICON" file="ntp_favicon.png" />
+   <structure type="chrome_scaled_image" name="IDD_ERROR_PAGE_FAVICON" file="page_not_find.png" />
+   <!-- dark -->
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_N_DARK" file="tab_close_n_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_H_DARK" file="tab_close_h_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_TAB_CLOSE_P_DARK" file="tab_close_p_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_NTP_FAVICON_DARK" file="ntp_favicon_dark.png" />
+   <structure type="chrome_scaled_image" name="IDD_ERROR_PAGE_FAVICON_DARK" file="page_not_find_dark.png" />
+
+   <!-- toolbar -->
+  <structure type="chrome_scaled_image" name="IDD_BACK_N" file="toolbar/back_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_D" file="toolbar/back_d.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_H" file="toolbar/back_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_P" file="toolbar/back_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_N" file="toolbar/forward_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_D" file="toolbar/forward_d.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_H" file="toolbar/forward_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_P" file="toolbar/forward_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_N" file="toolbar/revocation_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_D" file="toolbar/revocation_d.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_H" file="toolbar/revocation_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_P" file="toolbar/revocation_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_LEFT_H" file="toolbar/revocation_left_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_LEFT_P" file="toolbar/revocation_left_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_RELOAD_N" file="toolbar/reload_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_RELOAD_H" file="toolbar/reload_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_STOP_N" file="toolbar/stop_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_STOP_H" file="toolbar/stop_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_NAVIGATE_N" file="toolbar/navigate_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_NAVIGATE_H" file="toolbar/navigate_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_N" file="toolbar/menu_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_H" file="toolbar/menu_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_P" file="toolbar/menu_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_N" file="toolbar/menu_invisible_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_H" file="toolbar/menu_invisible_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_P" file="toolbar/menu_invisible_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_DROPDOWN_N" file="toolbar/dropdown_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DROPDOWN_H" file="toolbar/dropdown_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_ADDFAV_N" file="toolbar/add_fav_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_ADDFAV_H" file="toolbar/add_fav_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_ADDFAV_ACTIVE_N" file="toolbar/fav_active_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_ADDFAV_ACTIVE_H" file="toolbar/fav_active_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_SCREENSHOT_N" file="toolbar/screenshot_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_SCREENSHOT_H" file="toolbar/screenshot_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_QR_N" file="toolbar/qr_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_QR_H" file="toolbar/qr_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_N" file="toolbar/download_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_H" file="toolbar/download_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_P" file="toolbar/download_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_WECHAT_N" file="toolbar/wechat_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_WECHAT_H" file="toolbar/wechat_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_COMPATIBLE_MODE_ON_N" file="toolbar/compatible_mode_on_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_COMPATIBLE_MODE_ON_H" file="toolbar/compatible_mode_on_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_COMPATIBLE_MODE_OFF_N" file="toolbar/compatible_mode_off_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_COMPATIBLE_MODE_OFF_H" file="toolbar/compatible_mode_off_h.png" />
+  <!--
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD" file="toolbar/download_button_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_H" file="toolbar/download_button_h.png" />
+  -->
+  <structure type="chrome_scaled_image" name="IDD_SEARCH_BAR_BUTTON" file="toolbar/search_bar_button_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_SEARCH_BAR_BUTTON_H" file="toolbar/search_bar_button_h.png" />
+  <!-- dark-->
+  <structure type="chrome_scaled_image" name="IDD_BACK_N_DARK" file="toolbar/back_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_D_DARK" file="toolbar/back_d_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_H_DARK" file="toolbar/back_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_BACK_P_DARK" file="toolbar/back_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_N_DARK" file="toolbar/forward_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_D_DARK" file="toolbar/forward_d_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_H_DARK" file="toolbar/forward_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_FORWARD_P_DARK" file="toolbar/forward_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_N_DARK" file="toolbar/revocation_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_D_DARK" file="toolbar/revocation_d_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_H_DARK" file="toolbar/revocation_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_P_DARK" file="toolbar/revocation_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_LEFT_H_DARK" file="toolbar/revocation_left_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_REVOCATION_LEFT_P_DARK" file="toolbar/revocation_left_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_N_DARK" file="toolbar/menu_invisible_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_H_DARK" file="toolbar/menu_invisible_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_INVISIBLE_P_DARK" file="toolbar/menu_invisible_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_N_DARK" file="toolbar/menu_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_H_DARK" file="toolbar/menu_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_MENU_P_DARK" file="toolbar/menu_p_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_N_DARK" file="toolbar/download_n_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_H_DARK" file="toolbar/download_h_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_P_DARK" file="toolbar/download_p_dark.png" />
+
+
+  <!-- 预置图标的favicon -->
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_TENGXUN" file="tengxun.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_JINGDONG" file="jingdong.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_TAOBAO" file="taobao.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_XINLANG" file="xinlang.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_XIAMI" file="xiami.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_BAIDU" file="baidu.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_QZONE" file="qzone.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_AIQIYI" file="aiqiyi.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_YOUKU" file="youku.png" />
+   <structure type="chrome_scaled_image" name="IDD_BOOKMARK_BAR_FAVICON_SINA" file="sina.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_CLEAR_HISTORY" file="toolbar/app_clear_history.png" />
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARKS_MENU" file="toolbar/app_favorites.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHOW_HISTORY" file="toolbar/app_history.png" />
+  <structure type="chrome_scaled_image" name="IDD_SHOW_DOWNLOADS" file="toolbar/app_show_downloads.png" />
+  <structure type="chrome_scaled_image" name="IDD_OPTIONS" file="toolbar/app_options_setting.png" />
+  <structure type="chrome_scaled_image" name="IDD_SET_AS_DEFAULT_BROWSER" file="toolbar/app_set_as_default_browser.png" />
+  <structure type="chrome_scaled_image" name="IDD_HAS_BEEN_SET_AS_DEFAULT" file="toolbar/app_has_been_set_as_default.png" />
+  <structure type="chrome_scaled_image" name="IDD_LOCKED" file="toolbar/app_locked.png" />
+  <structure type="chrome_scaled_image" name="IDD_UNLOCKED" file="toolbar/app_unlocked.png" />
+  <structure type="chrome_scaled_image" name="IDD_FULL_SCREEN" file="toolbar/app_full_screen.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_CHECKBOX_N" file="toolbar/checkbox_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_CHECKBOX_H" file="toolbar/checkbox_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_CHECKBOX_P" file="toolbar/checkbox_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_BUBBLE_CLOSE_N" file="toolbar/close_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_BUBBLE_CLOSE_H" file="toolbar/close_h.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_PREVIEW_DEFAULT" file="toolbar/tab_preview.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_BOOKMARK_FOLDER" file="toolbar/bookmark_folder.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_0" file="toolbar/download_percent_0.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_25" file="toolbar/download_percent_25.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_50" file="toolbar/download_percent_50.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_75" file="toolbar/download_percent_75.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_100" file="toolbar/download_percent_100.png" />
+  <!--dark-->
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_0_DARK" file="toolbar/download_percent_0_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_25_DARK" file="toolbar/download_percent_25_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_50_DARK" file="toolbar/download_percent_50_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_75_DARK" file="toolbar/download_percent_75_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_DOWNLOAD_PERCENT_100_DARK" file="toolbar/download_percent_100_dark.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_APP_MANAGER_N" file="toolbar/app_manager_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_APP_MANAGER_H" file="toolbar/app_manager_h.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_ClOSE_DIALOG" file="close_dialog_nfs.png" />
+  <structure type="chrome_scaled_image" name="IDD_ClOSE_DIALOG_H" file="close_dialog_h_nfs.png" />
+  <structure type="chrome_scaled_image" name="IDD_ClOSE_DIALOG_P" file="close_dialog_p_nfs.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_PRIVATEWINDOWICON_N" file="privatewindow_16.png" />
+  <structure type="chrome_scaled_image" name="IDD_PRIVATEWINDOWICON_N_DARK" file="privatewindow_16_dark.png" />
+  <structure type="chrome_scaled_image" name="IDD_CRASHED_TAB_N" file="crashed_tab.png" />
+
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_CHECKED_N" file="dialog_checkbox_checked_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_CHECKED_H" file="dialog_checkbox_checked_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_CHECKED_P" file="dialog_checkbox_checked_p.png" />
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_UNCHECK_N" file="dialog_checkbox_uncheck_n.png" />
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_UNCHECK_H" file="dialog_checkbox_uncheck_h.png" />
+  <structure type="chrome_scaled_image" name="IDD_DIALOG_CHECKBOX_UNCHECK_P" file="dialog_checkbox_uncheck_p.png" />
+
+</grit-part>

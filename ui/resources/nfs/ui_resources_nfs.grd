@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit latest_public_release="0" current_release="1">
+  <outputs>
+    <output filename="grit/ui_resources_nfs.h" type="rc_header" context="default_100_percent">
+      <emit emit_type='prepend'></emit>
+    </output>
+    <output filename="grit/ui_resources_nfs_map.cc" type="resource_map_source" context="default_100_percent" />
+    <output filename="grit/ui_resources_nfs_map.h" type="resource_map_header" context="default_100_percent" />
+    <output filename="ui_resources_nfs_100_percent.pak" type="data_package" context="default_100_percent" />
+    <output filename="ui_resources_nfs_200_percent.pak" type="data_package" context="default_200_percent" />
+    <output filename="ui_resources_nfs_300_percent.pak" type="data_package" context="default_300_percent" />
+  </outputs>
+  <release seq="1">
+    <structures fallback_to_low_resolution="true">
+      <part file="ui_resources_nfs.grdp" />
+
+      <structure type="chrome_scaled_image" name="IDR_CDOS_FOLDER_CLOSED" file="common/folder_closed.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_FOLDER_CLOSED_RTL" file="common/folder_closed_rtl.png" />
+
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_CHROME" file="importer/chrome_32.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_EDGE" file="importer/edge_32.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_FIREFOX" file="importer/firefox_32.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_HTML" file="importer/html_32.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_IE" file="importer/ie_32.png" />
+      <structure type="chrome_scaled_image" name="IDR_CDOS_IMPORTER_SAFARI" file="importer/safari_32.png" />
+    </structures>
+  </release>
+</grit>
