@@ -1,0 +1,52 @@
+<!doctype html>
+<html i18n-values="dir:textdirection;lang:language">
+<head>
+  <meta charset="UTF-8">
+  <title i18n-content="app_manager_title"></title>
+  <link rel="stylesheet" href="app_manager.css" type="text/css">
+  <script src="nfsbrowser://resources/js/cr.js"></script>
+  <script src="nfsbrowser://resources/js/load_time_data.js"></script>
+  <script src="strings.js"></script>
+</head>
+<body>
+
+<div id="app-main">
+
+  <div id="menu-list">
+    <ul>
+      <li i18n-content="enable"></li>
+      <li i18n-content="disable"></li>
+      <li i18n-content="uninstall"></li>
+    </ul>
+  </div>
+
+  <header>
+    <h4>
+      <span i18n-content="installed_app"></span><span data-sld=true i18n-content="recommend"></span>
+    </h4>
+  </header>
+  <section>
+    <div id="install">
+      <ul class="clearfix">
+        <li class="add">
+          <dl>
+            <dd><a href=""></a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div id="recommend">
+      <ul>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <h4><a href="" i18n-content="more"></a></h4>
+  </footer>
+  <script src="app_manager.js"></script>
+</div>
+
+<script src="nfsbrowser://resources/js/i18n_template.js"></script>
+<script src="nfsbrowser://resources/js/jstemplate_compiled.js"></script>
+</body>
+</html>

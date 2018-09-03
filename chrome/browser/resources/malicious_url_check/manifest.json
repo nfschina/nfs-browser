@@ -1,0 +1,26 @@
+{
+  "name": "恶意网址检测",
+  "version": "2.1.1",
+  "permissions": [
+    "tabs",
+    "checkmurl",
+    "activeTab", 
+    "http://*/*", 
+    "https://*/*", 
+    "contextMenus", 
+    "webNavigation", 
+    "webRequest",
+    "webRequestBlocking",
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "description": "Check url whether is malicious or not",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "key": "MIICUidDBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArzT7IlhskIIOkleGjTE1jr/TAvtDXlvdfJepapeCActjQ2kyoHtUWuw7vdI1rWA8BoSWArrxXY+MIPqAfeentHOnMR6cC5DNC9sKhnHZ+tmgZrH/9HAZ4a+qNzDpNW5ZEOX0dxoF869L9FYIW1lPBq970X8FiJXxH0m63HFPNYtmIbYlYlYsEnufS2Tm3h6r6ide3tUIPrOQJaRnhZcTKRtAvTVV05Pu8UsbFE5OV4od/dUxgYNZRunXgehPE2hmPYbiESxwTowhZC73uh8IMZ68TK/fBDMRl0+6gYLCXcFudV44WX8bqaLL/C6hHnGByQqrBwtKCWQnu44UlfutHQIDAQAB",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

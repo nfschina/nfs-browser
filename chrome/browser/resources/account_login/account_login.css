@@ -1,0 +1,193 @@
+body {
+  /*background: #76b852;
+  /* fallback for old browsers
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
+/*  width: 400px;
+  height: 280px;*/
+  overflow-x: hidden; overflow-y: hidden;
+}
+
+
+.form,
+.manage {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto auto;
+  padding: auto;
+  /*text-align: center;*/
+  /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+}
+
+input[type=text],
+input[type=password] {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #FFFFFF;
+  width: 100%;
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#submit {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4FA7FF;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 30 0 0 0px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#result {
+  color: red;
+}
+
+#manage-page {
+  margin-left: 40px;
+}
+
+#email-name {
+  font-size: 20px;
+}
+
+#use-time {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+#sync-message {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#show-time {
+  font-size: 20px;
+}
+
+#logout-btn {
+  float:center;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4FA7FF;
+  width: 100px;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 30 30 30 30px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#sync-btn {
+  float:left;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4FA7FF;
+  width: 100px;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 30 30 30 30px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#share-btn {
+  float:right;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #C0C0C0;
+  width: 100px;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 60 60 60 60px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: default;
+}
+
+#success-btn {
+  float:right;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #C0C0C0;
+  width: 100px;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 60 60 60 60px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: default;
+}
+
+#email-name {
+  float:left;
+}
+
+
+#checkbox_1 {
+  float:left;
+}
+
+#checkbox_2 {
+  float:left;
+}
+
+#checkbox_3 {
+  float:left;
+}
+
+#checkbox_4 {
+  float:left;
+}
+
+#copy-link {
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+#btn-copy {
+  margin-top: 10px;
+}
+
+#btn-sync {
+  margin-top: 10px;
+}
+
+#copy-link span {
+  font-size: 15px;
+}
+
+#btn {
+  text-align: center;
+}

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CdosBrowser context menu specific strings (included from cdosbrowser_strings.grd). -->
+<grit-part>
+  <message name="IDS_BOOKMARK_BAR_BOOKMARK_MANAGER_SHORTCUT_NAME" desc="Name shown in the bookmark bar for the bookmark manager page shortcut">
+    Bookmark Manager
+  </message>
+  <message name="IDS_BOOKMARK_BAR_BOOKMARK_MANAGER_SHORTCUT_TOOLTIP" desc="Text shown in the tooltip of the bookmakr manager page shortcut in the bookmark bar">
+    Open bookmark manager
+  </message>
+  <message name="IDS_BOOKMARK_BAR_SHOW_BOOKMARK_MANAGER_SHORTCUT" desc="Name shown in the context menu to hide/show the apps shortcut in the bookmark bar">
+    Show bookmark manager shortcut
+  </message>
+
+  <message name="IDS_NEWTAB_TYPE_URL" desc="Type or paste URL">
+    Type or paste URL
+  </message>
+  <message name="IDS_NEWTAB_POPULAR_WEBSITES" desc="popular websites">
+    Popular websites
+  </message>
+  <message name="IDS_NEWTAB_BOOKMARKS" desc="bookmarks">
+    Bookmarks
+  </message>
+  <message name="IDS_NEWTAB_RECENTLY_USED" desc="Recently used">
+    Recently used
+  </message>
+  <message name="IDS_NEWTAB_ENTER_NAME" desc="Enter the name">
+    Enter the name
+  </message>
+  <message name="IDS_NEWTAB_CONTEXTMENU_OPEN_IN_NEW_TAB" desc="Context sensitive menu item to open the selected link in a new tab.">
+    Open in new tab
+  </message>
+  <message name="IDS_NEWTAB_CONTEXTMENU_OPEN_IN_NEW_WINDOW" desc="Context sensitive menu item to open the selected link in the other window.">
+    Open in new window
+  </message>
+  <message name="IDS_NEWTAB_CONTEXTMENU_OPEN_IN_INCOGNITO_WINDOW" desc="Context sensitive menu item to open the selected link in a new incognito window.">
+    Open in incognito window
+  </message>
+  <message name="IDS_NEWTAB_URL_IS_INVALID" desc="url is invalid.">
+    Url is invalid.
+  </message>
+  <message name="IDS_NEWTAB_URL_OR_NAME_EMPTY" desc="Please fill all required fields.">
+    Please fill all required fields.
+  </message>
+  <message name="IDS_NEWTAB_UNKNOWN_ERROR" desc="Unknown error">
+    Unknown error
+  </message>
+  <message name="IDS_NEW_TAB_OTR_HEADING_CDOS"
+           desc="Heading used when a person opens an OTR window">
+    Welcome to Incognito Mode
+  </message>
+  <message name="IDS_NEW_TAB_OTR_DESCRIPTION_CDOS"
+           desc="Used when a person opens an OTR window">
+    Pages you view in incognito tabs won't be recorded in your browser's history, or search history after you've closed all of your incognito tabs. But, any files you download or bookmarks you create will be kept.
+  </message>
+  <message name="IDS_NEW_TAB_INCOGNITO_WELCOME"
+           desc="welcome to">
+    incognito welcome to
+  </message>
+  <message name="IDS_NEW_TAB_INCOGNITO_TEXT"
+           desc="welcome to">
+    incognito text
+  </message>
+  <message name="IDS_NEW_TAB_INCOGNITO_MODE"
+           desc="welcome to">
+    incognito mode
+  </message>
+<message name="IDS_PLACEHOLDER_LOCATION_BAR" desc="place holder in the location bar">
+    Input URL or Search
+  </message>
+
+  <message name="IDS_PLACEHOLDER_LOCATION_BAR_PRIVACY" desc="Privacy place holder in the location bar">
+    Currently, no trace window, no traces on the Internet
+  </message>
+
+  <message name="IDS_PLACEHOLDER_SEARCH_BAR" desc="place holder in the search bar">
+    Search Here
+  </message>
+
+  <message name="IDS_SEARCH_ENGINE_SOGOU" desc="change search engine to sogou">
+    Sogou
+  </message>
+
+  <message name="IDS_SEARCH_ENGINE_GOOGLE" desc="change search engine to google">
+    Google
+  </message>
+
+  <message name="IDS_SEARCH_ENGINE_BAIDU" desc="change search engine to baidu">
+    Baidu
+  </message>
+
+  <message name="IDS_SEARCH_ENGINE_BING" desc="change search engine to bing">
+    Bing
+  </message>
+
+  <message name="IDS_TOOLTIP_WEB_RECYCLE_BIN" desc="The tooltip for the web recycle bin">
+    web recycle bin
+  </message>
+
+  <message name="IDS_TOOLTIP_DROPDOWN_LIST" desc="The tooltip for the location bar dropdown list">
+    the location bar dropdown list
+  </message>
+
+  <message name="IDS_TOOLTIP_SWITCH_SEARCH_ENGINE" desc="The tooltip for search engine">
+    click to switch the search engine
+  </message>
+
+  <message name="IDS_TOOLTIP_SEARCH" desc="The tooltip for search">
+    click to search
+  </message>
+
+  <message name="IDS_TOOLTIP_ACROSS_SCREEN" desc="The tooltip for browsing acrossing the screen">
+    to browse acrossing the screen
+  </message>
+
+  <message name="IDS_TOOLTIP_BOOKMARK_BAR" desc="The tooltip for whether to show bookmark bar">
+    show bookmark bar
+  </message>
+
+  <message name="IDS_TOOLTIP_MENU_BAR" desc="The tooltip for whether to show menu bar">
+    show menu bar
+  </message>
+
+  <message name="IDS_NEW_NORMAL_OR_SECRET_WINDOW" desc="The text label of a menu item for opening a new window">
+    New normal or secrte window
+  </message>
+
+  <message name="IDS_CLEAR_HISTORY" desc="The text label of a menu item for clearing histories">
+    clear history
+  </message>
+
+  <message name="IDS_MY_APP" desc="The text label of a menu item for my applications">
+    My applications
+  </message>
+
+  <message name="IDS_PAGE_SAVE_AS" desc="The text label of a menu item for page save as">
+    page save as
+  </message>
+
+  <message name="IDS_PAGE_SAVE_AS_PIC" desc="The text label of a menu item for page save as picture">
+    save  page as picture
+  </message>
+
+  <message name="IDS_SET_AS_DEFAULT_BROWSER" desc="The text label of a menu item for set as default browser">
+    set as default browser
+  </message>
+
+   <message name="IDS_ALREADY_IS_DEFAULT_BROWSER" desc="The text label of a menu item for set as default browser">
+    Already set as default browser
+  </message>
+
+  <message name="IDS_CLOSE_MULTI_TABS_TITLE" desc="title on the close multi tabs message box">
+    NFSBrowser
+  </message>
+
+  <message name="IDS_CLOSE_MULTI_TABS_CONTENT" desc="content on the close multi tabs message box">
+    You are closing multiple tabs, are you sure to quit?
+  </message>
+
+  <message name="IDS_CLOSE_MULTI_TABS_OK" desc="ok button on the close multi tabs message box">
+    OK
+  </message>
+
+  <message name="IDS_CLOSE_MULTI_TABS_CANCEL" desc="cancel button on the close multi tabs message box">
+    Cancel
+  </message>
+
+   <message name="IDS_CLOSE_MULTI_TABS_NO_REMAINDER" desc="remainder tooltips  on the close multi tabs message box">
+    No reminder
+  </message>
+
+   <message name="IDS_DEFAULT_BROWSER_INFOBAR_TEXT_CDOS" desc="set as default browser inforbar">
+    Set the browser as the default browser?
+  </message>
+  <message name="IDS_CACHE_BROWSER_INFOBAR_TEXT_CDOS" desc="set as cache auto clear  browser inforbar">
+   The Cache size is too large, Do you Want to Clear it
+  </message>
+  <message name="IDS_CACHE_INFOBAR_OK_BUTTON_LABEL" desc="set as cache auto clear  browser inforbar">
+  Auto Clear
+  </message>
+   <message name="IDS_CACHE_INFOBAR_CANCEL_BUTTON_LABEL" desc="set as cache auto clear  browser inforbar">
+ Skip It
+  </message>
+  <message name="IDS_BOOKMARK_BUBBLE_PAGE_BOOKMARK_CDOS" desc="bookmark bubble view title">
+    Add Page
+  </message>
+
+  <message name="IDS_BOOKMARK_BUBBLE_PAGE_BOOKMARKED_CDOS" desc="bookmarked bubble view title">
+    Page Added
+  </message>
+
+  <message name="IDS_QR_BUBBLE_TITLE_CDOS" desc="QR bubble view title">
+    Open Url By Mobile
+  </message>
+
+  <message name="IDS_TOOLTIPS_NAVIGATE" desc="tooltips of the navigate icon in the location bar">
+    Navigate
+  </message>
+
+   <message name="IDS_URL_COPY" desc="copy button in url floating view">
+    Copy Url
+  </message>
+
+   <message name="IDS_URL_PASTE_AND_OPEN" desc="paste and open button in url floating view">
+    Paste and open
+  </message>
+
+   <message name="IDS_DOWNLOAD_TOOLTIP" desc="The tooltip for download button">
+    Open The Download Window
+   </message>
+
+   <message name="IDS_WECHAT_TOOLTIP" desc="The tooltip for wechat button">
+    Open The wechat webapp
+   </message>
+
+   <message name="IDS_SHOW_SEARCHBAR" desc="show search bar or not">
+    Show Search Bar
+   </message>
+
+   <message name="IDS_SHOW_TOOLBAR" desc="show tool bar or not">
+    Show Tool Bar
+   </message>
+
+   <message name="IDS_SHOW_BOOKMARKBAR" desc="show bookmark bar or not">
+    Show Bookmark Bar
+   </message>
+
+   <message name="IDS_IMPORT_BOOKMARK" desc="import bookmark">
+    Import Bookmark
+   </message>
+
+   <message name="IDS_EXPORT_BOOKMARK" desc="export bookmark">
+     Export Bookmark
+   </message>
+
+   <message name="IDS_DOWNLOAD_FEEDBACK_FOLDERS" desc="Download successfully feedback floders label.">
+    Folders
+  </message>
+
+  <message name="IDS_DOWNLOAD_FEEDBACK_COMPLETE" desc="Download successfully feedback.">
+    Download Complete!
+  </message>
+
+   <message name="IDS_DOWNLOAD_FEEDBACK_FAILED" desc="Download failed feedback.">
+    Download Failed!
+  </message>
+
+  <message name="IDS_DOWNLOAD_FEEDBACK_LABEL_RETRY" desc="Download failed feedback retry lable.">
+    Retry
+  </message>
+
+  <message name="IDS_DOWNLOAD_FEEDBACK_LABEL_DELETE" desc="Download failed feedback delete lable.">
+    Delete
+  </message>
+
+    <message name="IDS_DOWNLOAD_MANAGER_TITLE" desc="Download manager title">
+    Download Manager
+  </message>
+
+  <message name="IDS_NEW_DOWNLOAD_TITLE" desc="new download title">
+    New Download Task
+  </message>
+
+  <message name="IDS_DOWNLOAD_MENU_DELETE_TASK" desc="delete task iterm">
+    Delete task
+  </message>
+
+  <message name="IDS_DOWNLOAD_MENU_DELETE_TASK_DOWNLOAD" desc="delete task iterm and download file">
+    Delete Task And Download
+  </message>
+
+  <message name="IDS_DOWNLOAD_MENU_MOVE_FOLDER" desc="move download to other folder">
+    Move Folder
+  </message>
+
+  <message name="IDS_DOWNLOAD_MENU_COPY_DOWNLOAD_LINK" desc="copy download link">
+    Copy Link
+  </message>
+
+  <message name="IDS_DOWNLOAD_MENU_DOWNLOAD_AGAIN" desc="download again">
+    Download Again
+  </message>
+
+  <message name="IDS_DOWNLOAD_TASK_REMOVE_CONFIRM_TITLE" desc="remove download confirm">
+    Download delete
+  </message>
+
+  <message name="IDS_DOWNLOAD_TASK_REMOVE_CONFIRM_CONTENT" desc="content on the remove download confirm message box">
+    Are you sure to delete the task from the list?
+  </message>
+
+  <message name="IDS_DOWNLOAD_TASK_REMOVE_CONFIRM_REMAINDER" desc="remainder tooltips on the remove download confirm message box">
+    Delete file synchronous
+  </message>
+  <message name="IDS_HISTORY_ADD_BOOKMARK" desc="tooltips of add history to bookmark">
+    Add History To Bookmark
+  </message>
+
+  <message name="IDS_HISTORY_SEARCH_PLACEHOLDER" desc="placeholder of search in the history">
+    Search In The History
+  </message>
+
+  <message name="IDS_REMOVE_FROM_VISIT" desc="tooltips of remove from visit">
+    Remove From Visit
+  </message>
+
+  <message name="IDS_SEARCH_MORE_ABOUT_THIS_SITE" desc="tooltips of search more about this site">
+    Search More About This Site
+  </message>
+
+  <message name="IDS_TAB_CXMENU_SUSPENDOTHERTABS" desc="The text label of a menu item for suspend other tabs">
+    Suspend other tabs
+  </message>
+
+  <message name="IDS_TAB_CXMENU_RELOADALLTABS" desc="The label of the 'ReloadAllTabs' Tab context menu item.">
+    Reload all tabs
+  </message>
+
+  <message name="IDS_DROPDOWNVIEW_EMPTY_PROPMT" desc="The prompt text  of dropdown view has no visit histories.">
+    No visit history
+  </message>
+
+  <message name="IDS_SMALL_POPUP_VIDEO_RETURN_BTN" desc="tooltips for the return btn on the popup video">
+    Back To Normal Window
+  </message>
+
+  <message name="IDS_SMALL_POPUP_VIDEO_TOPMOST_BTN" desc="tooltips for the topmost pin btn on the popup video">
+    Set to Topmost
+  </message>
+
+  <message name="IDS_SMALL_POPUP_VIDEO_CANCEL_TOPMOST_BTN" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Cancel Set to Topmost
+  </message>
+
+  <message name="IDS_THEME_BUTTON_TOOLTIP" desc="tooltips theme gallery button">
+    Theme Gallery
+  </message>
+
+  <message name="IDS_LOGIN_BUTTON_TOOLTIP" desc="login button">
+    NFSBrowser login
+  </message>
+
+  <message name="IDS_OPEN_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Open Tab
+  </message>
+
+  <message name="IDS_COPY_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Copy Tab
+  </message>
+
+  <message name="IDS_OPEN_HOMEPAGE" desc="tooltips for the topmost pin btn on the popup video">
+    HomePage
+  </message>
+
+  <message name="IDS_CLOSE_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Close Tab
+  </message>
+
+  <message name="IDS_CLOSE_ALL_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Close All Tab
+  </message>
+
+  <message name="IDS_REOPEN_LAST_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Reopen the Last Tab
+  </message>
+  <message name="IDS_SWITCH_TO_PREVIOUS_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Switch to Previous Tab
+  </message>
+  <message name="IDS_SWITCH_TO_NEXT_TAB" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Switch to Next Tab
+  </message>
+  <message name="IDS_OPEN_NEW_WINDOW" desc="tooltips for the cancel topmost pin btn on the popup video">
+    New Window
+  </message>
+  <message name="IDS_SELECT_ADDRESS_BAR" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Select Addressbar
+  </message>
+  <message name="IDS_OPEN_STEALTH_WINDOW" desc="tooltips for the cancel topmost pin btn on the popup video">
+    New Incognito Window
+  </message>
+  <message name="IDS_DROPDOWN_LIST" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Dropdown List
+  </message>
+  <message name="IDS_STOP" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Stop
+  </message>
+  <message name="IDS_REFRESH" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Refresh Page
+  </message>
+  <message name="IDS_FORCE_REFRESH" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Force Refresh
+  </message>
+  <message name="IDS_PAGE_ZOOM" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Page Zoom
+  </message>
+  <message name="IDS_PAGE_SHRINK" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Page Shrink
+  </message>
+  <message name="IDS_RESTORE_PAGE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Restore Page
+  </message>
+  <message name="IDS_FULL_SCREEN" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Full Screen
+  </message>
+  <message name="IDS_SAVE_CURRENT_PAGE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Save Page...
+  </message>
+  <message name="IDS_SAVE_PAGE_AS_PICTURE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Save Page as Picture
+  </message>
+  <message name="IDS_PAGE_PRINT" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Print...
+  </message>
+  <message name="IDS_OPEN_FILE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Open File
+  </message>
+  <message name="IDS_PAGE_SEARCH" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Find...
+  </message>
+  <message name="IDS_OPEN_DOWNLOADMANGER" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Downloads
+  </message>
+  <message name="IDS_VIEW_HISTORY" desc="tooltips for the cancel topmost pin btn on the popup video">
+    History
+  </message>
+  <message name="IDS_CLEAR_TRACES" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Clear Traces
+  </message>
+  <message name="IDS_ADD_BOOKMARK" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Bookmark this Page
+  </message>
+  <message name="IDS_SHOW_HIDE_BOOKMARKBAR" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Show Bookmarkbar
+  </message>
+  <message name="IDS_DEVELOPER_TOOL" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Developer Tools
+  </message>
+  <message name="IDS_CLICK_MODIFY_SHORTCUT_KEYS" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Click to modify shortcut keys
+  </message>
+  <message name="IDS_SYS_SHORTCUT_NOT_EDITABLE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    System shortcuts aren't editable
+  </message>
+  <message name="IDS_DELETE_SHORTCUT" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Click to delete shortcut
+  </message>
+  <message name="IDS_RESTORE_DEFAULT_SUCESS" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Restore default success
+  </message>
+  <message name="IDS_NOT_ALLOW_CHINESE" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Not allow input Chinese!
+  </message>
+  <message name="IDS_NOT_ALLOW_SYS_SHORTCUT" desc="tooltips for the cancel topmost pin btn on the popup video">
+    Not allow use system shortcut!
+  </message>
+  <message name="IDS_THIS_SHORTCUT_ALREADY" desc="tooltips for the cancel topmost pin btn on the popup video">
+    This shortcut already by "
+  </message>
+  <message name="IDS_USED" desc="tooltips for the cancel topmost pin btn on the popup video">
+    " action used!
+  </message>
+  <message name="IDS_USED_RESET" desc="tooltips for the cancel topmost pin btn on the popup video">
+    " action used, please reset!
+  </message>
+  <message name="IDS_THIS_SHORTCUT_ALREADY_USED_BY_SYS" desc="tooltips for the cancel topmost pin btn on the popup video">
+    This shortcut already used by system!
+  </message>
+  <message name="IDS_THIS_SHORTCUT_ALREADY_USED_BY_SYS_RESET" desc="tooltips for the cancel topmost pin btn on the popup video">
+    This shortcut already used by system, please reset!
+  </message>
+  <message name="IDS_ACCNAME_THEME" desc="The accessible name for the theme button.">
+    Theme center
+  </message>
+  <message name="IDS_WEBSITE_NONE_REENTER" desc="The label  of  download  ">
+    The URL is empty, please enter !
+  </message>
+  <message name="IDS_WEBSITE_INVALID_REENTER" desc="The label  of  download  ">
+    URL is invalid, please re-enter !
+  </message>
+  <message name="IDS_FILENAME_NONE_REENTER" desc="The label  of  download  ">
+    The file name is empty. Please enter !
+  </message>
+  <message name="IDS_FILENAME_TOOLONG_REENTER" desc="The label  of  download  ">
+    File name is too long, please re-enter !
+  </message>
+  <message name="IDS_DOWNLOAD_PATH_NONE_REENTER" desc="The label  of  download  ">
+    The download path is empty, select path !
+  </message>
+  <message name="IDS_FILE_EXIST_REENTER" desc="The label  of  download  ">
+    The file already exists, please modify !
+  </message>
+
+  <message name="IDS_APP_MANAGER_TITLE" desc="app manager title">
+    Application Manager
+  </message>
+  <message name="IDS_APP_MANAGER_INSTALLED_APP" desc="The lable of installed app tab">
+    Installed
+  </message>
+  <message name="IDS_APP_MANAGER_RECOMMEND" desc="The lable of recommend tab">
+    Recommend
+  </message>
+  <message name="IDS_APP_MANAGER_INSTALL" desc="The lable of install button">
+    Install
+  </message>
+  <message name="IDS_APP_MANAGER_INSTALLED" desc="The lable of install button">
+    Installed
+  </message>
+  <message name="IDS_APP_MANAGER_INSTALLING" desc="The lable of install button">
+    Installing
+  </message>
+  <message name="IDS_APP_MANAGER_SETTING" desc="The lable of setting">
+    Setting
+  </message>
+  <message name="IDS_APP_MANAGER_DISABLE" desc="The lable of disable menu item">
+    Disable
+  </message>
+  <message name="IDS_APP_MANAGER_ENABLE" desc="The lable of enable menu item">
+    Enable
+  </message>
+  <message name="IDS_APP_MANAGER_UNINSTALL" desc="The lable of uninstall menu item">
+    Uninstall
+  </message>
+  <message name="IDS_APP_MANAGER_MORE" desc="The lable of more app button">
+    More Extensions
+  </message>
+  <message name="IDS_APP_MANAGER_TOOLTIP" desc="The tooltip for app manager button">
+    App manager
+  </message>
+  <message name="IDS_APP_MANAGER_ADBLOCK_NAME" desc="The name of Adblock extension">
+    Adblock Plus
+  </message>
+  <message name="IDS_APP_MANAGER_ADBLOCK_DESCRIPTION" desc="The description of Adblock extension">
+    Used on over 100 million devices, Adblock Plus is the world's most popular ad blocker.
+  </message>
+  <message name="IDS_APP_MANAGER_READINGMODE_NAME" desc="The name of Reading mode extension">
+    Reading Mode
+  </message>
+  <message name="IDS_APP_MANAGER_READINGMODE_DESCRIPTION" desc="The description of Reading Mode extension">
+    Turn on Reading Mode to enable ad-free reading.
+  </message>
+  <message name="IDS_APP_MANAGER_WECHAT_NAME" desc="The name of weChat extension">
+    WeChat
+  </message>
+  <message name="IDS_APP_MANAGER_WECHAT_DESCRIPTION" desc="The description of weChat extension">
+    Use weChat in in your Browser.
+  </message>
+  <message name="IDS_APP_MANAGER_ACTIVEX_NAME" desc="The name of activeX extension">
+    ActiveX
+  </message>
+  <message name="IDS_APP_MANAGER_ACTIVEX_DESCRIPTION" desc="The description of activeX extension">
+    Use ActiveX controls in your Browser.
+  </message>
+  <message name="IDS_APP_MANAGER_SMOOTHSCROLL_NAME" desc="The name of SmoothScroll extension">
+    Smooth Scroll
+  </message>
+  <message name="IDS_APP_MANAGER_SMOOTHSCROLL_DESCRIPTION" desc="The description of SmoothScroll extension">
+    Improve the fluency of mouse and keyboard scrolling page.
+  </message>
+  <message name="IDS_APP_MANAGER_PEPPERFLASH_NAME" desc="The name of pepperFlash">
+    Pepper Flash
+  </message>
+  <message name="IDS_APP_MANAGER_PEPPERFLASH_DESCRIPTION" desc="The description of pepperFlash">
+    Abobe Pepper Flash is a lightweight, robust plugin for rich media and rich Internet applications.
+  </message>
+  <message name="IDS_APP_MANAGER_MOUSEGESTURE_NAME" desc="The name of MouseGesture">
+    Mouse Gesture
+  </message>
+  <message name="IDS_APP_MANAGER_MOUSEGESTURE_DESCRIPTION" desc="The description of MouseGesture">
+    Boost browsing productivity with your fingertips.
+  </message>
+  <message name="IDS_IMPORT_FAVORITES_INFOBAR_SHORT_TEXT" desc="More compact text to show in the import favorites query infobar.">
+    Whether to import bookmark.
+  </message>
+  <message name="IDS_IMPORT_FAVORITES_INFOBAR_OK_BUTTON_LABEL" desc="More compact text to show in the import favorites query infobar.">
+    import bookmark.
+  </message>
+    <message name="IDS_CHECK_UPDATE_INFOBAR_SHORT_TEXT" desc="More compact text to show in the check update query infobar.">
+    Whether to update browser.
+  </message>
+  <message name="IDS_CDOS_CHECK_UPDATE_TITLE" desc="More compact text to show in the check update query infobar.">
+    update browser.
+  </message>
+  <message name="IDS_CDOS_CHECK_UPDATE_CANCEL_TITLE" desc="More compact text to show in the check update cancel query infobar.">
+    cancel update browser.
+  </message>
+  <message name="IDS_PRINT_PREVIEW_SCALING_LABEL" desc="Scaling option label.">
+    Scale
+  </message>
+  <message name="IDS_PRINT_PREVIEW_SCALING_INSTRUCTION" desc="Instruction shown when the user enters an invalid scaling value.">
+    Scale amount must be a number between 10 and 200.
+  </message>
+  <message name="IDS_ENCODING_MENU" desc="The text label of the Encoding submenu.">
+    &amp;Encoding
+  </message>
+  <message name="IDS_ENCODING_AUTO_DETECT" desc="The text label of the Auto Detect submenu.">
+    Auto detect
+  </message>
+  <message name="IDS_DEFAULT_BROWSER_FAILURE_INFOBAR_SHORT_TEXT" desc="More compact text to show in the set default browser failure query infobar.">
+    Fail to set NFS as the default browser. Please Exit the security software and retry later.
+  </message>
+  <message name="IDS_TOOLTIP_COMPATIBLE_MODE" desc="The tooltip for compatible mode button.">
+    Compatible mode switch
+  </message>
+  <message name="IDS_ADD_PAGE_IN_CURRENT_FOLDER" desc="The text for add page in current folder button.">
+    Add page in this folder
+  </message>
+  <message name="IDS_LANGUAGE_SETTINGS_LAN_EN" desc="The text for langeuages setting english language option.">
+    English
+  </message>
+  <message name="IDS_LANGUAGE_SETTINGS_LAN_ZH_CN" desc="The text for langeuages setting Chinese Simplified language option.">
+    Chinese Simplified
+  </message>
+  <message name="IDS_LANGUAGE_SETTINGS_LAN_ZH_TW" desc="The text for langeuages setting Chinese Traditional language option.">
+    Chinese Traditional
+  </message>
+  <message name="IDS_LANGUAGE_SETTINGS_TIP" desc="The text for langeuages setting tip.">
+    Enable when restart
+  </message>
+</grit-part>

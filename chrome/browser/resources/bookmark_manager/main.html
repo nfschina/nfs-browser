@@ -1,0 +1,169 @@
+<!doctype html>
+<html i18n-values="dir:textdirection;lang:language">
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+<head>
+<meta name="google" value="notranslate">
+<meta charset="utf-8">
+<title i18n-content="title"></title>
+
+<link rel="stylesheet" href="nfsbrowser://resources/css/text_defaults.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/i18n_process.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/list.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/tree.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/menu.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/menu_button.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/widgets.css">
+<link rel="stylesheet" href="css/bmm.css">
+
+<script src="nfsbrowser://resources/js/event_tracker.js"></script>
+
+<script src="nfsbrowser://resources/js/cr.js"></script>
+<script src="nfsbrowser://resources/js/cr/event_target.js"></script>
+<script src="nfsbrowser://resources/js/cr/link_controller.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/touch_handler.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/array_data_model.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/command.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/focus_outline_manager.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/menu_item.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/menu.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/position_util.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/menu_button.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/context_menu_button.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/context_menu_handler.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/list_selection_model.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/list_selection_controller.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/list_item.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/list.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/tree.js"></script>
+<script src="nfsbrowser://resources/js/cr/ui/splitter.js"></script>
+
+<script src="nfsbrowser://resources/js/i18n_template_no_process.js"></script>
+<script src="nfsbrowser://resources/js/icon.js"></script>
+<script src="nfsbrowser://resources/js/load_time_data.js"></script>
+<script src="nfsbrowser://resources/js/util.js"></script>
+
+<script src="js/bmm.js"></script>
+<script src="js/bmm/bookmark_list.js"></script>
+<script src="js/bmm/bookmark_tree.js"></script>
+<script src="js/dnd.js"></script>
+</head>
+<body>
+
+<header class="head-main">
+  <h1 i18n-content="title"></h1>
+
+  <form>
+    <input type="search" id="term" i18n-values="placeholder:search_button" autofocus incremental>
+    <label></label>
+  </form>
+
+  <div class="operation-button">
+    <button i18n-content="add_folder" id="add-folder"></button>
+    <button i18n-content="add_bookmark" id="add-bookmark"></button>
+    <button i18n-content="import_bookmark" id="import-bookmark"></button>
+    <button i18n-content="export_bookmark" id="export-bookmark"></button>
+  </div>
+
+</header>
+
+<div class="main">
+  <div id="tree-pane" class="pane">
+    <div id="tree-container">
+      <tree id="tree" role="tree"></tree>
+    </div>
+  </div>
+  <div class="splitter">
+  </div>
+  <div id="list-pane" class="pane">
+    <!-- The list doesn't use a scroll container as it truncates horizontally
+         and handles its own vertical overflow. -->
+    <list id="list"></list>
+  </div>
+</div>
+
+<!-- Organize menu -->
+<command i18n-values=".label:rename_folder" id="rename-folder-command">
+</command>
+<command i18n-values=".label:edit" id="edit-command"></command>
+<command i18n-values=".label:show_in_folder" id="show-in-folder-command">
+</command>
+<command i18n-values=".label:cut" id="cut-command"></command>
+<command i18n-values=".label:copy" id="copy-command"></command>
+<command i18n-values=".label:paste" id="paste-from-organize-menu-command">
+</command>
+<command i18n-values=".label:delete" id="delete-command"></command>
+<command i18n-values=".label:undo_delete" id="undo-delete-command"></command>
+<command i18n-values=".label:sort" id="sort-command"></command>
+<command i18n-values=".label:add_new_bookmark" id="add-new-bookmark-command">
+</command>
+<command i18n-values=".label:new_folder" id="new-folder-command"></command>
+
+<!-- Folders menu -->
+<command i18n-values=".label:cut" id="cut-from-folders-menu-command"></command>
+<command i18n-values=".label:copy" id="copy-from-folders-menu-command">
+</command>
+<command i18n-values=".label:paste" id="paste-from-folders-menu-command">
+</command>
+<command i18n-values=".label:new_folder"
+    id="new-folder-from-folders-menu-command"></command>
+<command i18n-values=".label:delete" id="delete-from-folders-menu-command">
+</command>
+<command i18n-values=".label:undo_delete"
+    id="undo-delete-from-folders-menu-command"></command>
+
+<!-- Tools menu -->
+<command i18n-values=".label:import_menu" id="import-menu-command"></command>
+<command i18n-values=".label:export_menu" id="export-menu-command"></command>
+
+<!-- Context menu -->
+<command i18n-values=".label:paste" id="paste-from-context-menu-command">
+</command>
+
+<!-- open * are handled in canExecute handler -->
+<command id="open-in-new-tab-command"></command>
+<command id="open-in-background-tab-command"></command>
+<command id="open-in-new-window-command"></command>
+<command id="open-incognito-window-command"></command>
+<command id="open-in-same-window-command"></command>
+
+<command id="undo-command"></command>
+
+<command i18n-values=".label:rename_folder"
+    id="rename-folder-from-folders-menu-command"></command>
+<command i18n-values=".label:paste" id="paste-from-folders-menu-command">
+</command>
+
+<nfs-menu id="context-menu" hidden>
+  <button command="#open-in-new-tab-command" data-keyshort="O"></button>
+  <button command="#open-in-new-window-command" data-keyshort="N"></button>
+  <button command="#open-incognito-window-command" data-keyshort="I"></button>
+  <hr>
+  <button command="#rename-folder-command" data-keyshort="R"></button>
+  <button command="#edit-command" data-keyshort="E"></button>
+  <button command="#show-in-folder-command"></button>
+  <hr>
+  <button command="#cut-command" data-keyshort="T"></button>
+  <button command="#copy-command" data-keyshort="C"></button>
+  <button command="#paste-from-context-menu-command" data-keyshort="P"></button>
+  <hr>
+  <button command="#delete-command" data-keyshort="D"></button>
+  <button command="#undo-delete-command"></button>
+  <hr>
+  <button command="#add-new-bookmark-command" data-keyshort="G"></button>
+  <button command="#new-folder-command" data-keyshort="F"></button>
+</nfs-menu>
+
+<script src="js/main.js"></script>
+</body>
+</html>

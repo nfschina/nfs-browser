@@ -1,0 +1,50 @@
+<!doctype html>
+<html i18n-values="dir:textdirection;lang:language">
+<head>
+<meta charset="utf-8">
+<title i18n-content="newtask"></title>
+<link rel="stylesheet" href="nfsbrowser://resources/css/text_defaults_md.css">
+<link rel="stylesheet" href="nfsbrowser://resources/css/md_colors.css">
+<link href="downloads_new.css" type="text/css" rel="stylesheet">
+<script src="nfsbrowser://resources/js/jquery.js"></script>
+</head>
+<body>
+<div class="newdownload">
+  <div class="select-path">
+    <ul>
+    </ul>
+  </div>
+  <div class="newform">
+    <table width="420" border="0">
+      <tr>
+        <td width="70" i18n-content="website"></td>
+          <td><input type="text" class="new-url" i18n-values="placeholder:pleaseenterwebsite"></td>
+        </tr>
+        <tr>
+          <td i18n-content="name"></td>
+          <td><input type="text" class="new-name" i18n-values="placeholder:pleaseenterfilename"></td>
+        </tr>
+        <tr>
+          <td i18n-content="downloadto"></td>
+          <td class="downinfosize">
+				<span></span>
+            <input type="text" class="new-path" readonly="readonly" >
+            <label class="new-browse" i18n-content="browse"></label>
+          </td>
+        </tr>
+      </tr>
+    </table>
+  </div>
+  <div class="newsubmit">
+    <em class="err" hidden=""></em>
+    <span id="ok" class="ok" i18n-content="downloadbutton"></span>
+    <span id="cancel" class="cancel" i18n-content="cancelbutton"></span>
+  </div>
+</div>
+
+<link rel="import" href="nfsbrowser://downloads-new/i18n_setup.html">
+<link rel="import" href="nfsbrowser://resources/html/i18n_template.html">
+<script src="downloads_new.js" type="text/javascript"></script>
+
+</body>
+</html>

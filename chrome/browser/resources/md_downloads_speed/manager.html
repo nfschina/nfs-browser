@@ -1,0 +1,37 @@
+<link rel="import" href="nfsbrowser://resources/html/cr.html">
+<link rel="import" href="nfsbrowser://resources/html/cr/ui.html">
+<link rel="import" href="nfsbrowser://resources/html/cr/ui/command.html">
+<link rel="import" href="nfsbrowser://resources/html/polymer.html">
+<link rel="import" href="nfsbrowser://resources/html/util.html">
+<link rel="import" href="nfsbrowser://resources/polymer/v1_0/iron-list/iron-list.html">
+<link rel="import" href="nfsbrowser://downloads/action_service.html">
+<link rel="import" href="nfsbrowser://downloads/constants.html">
+<link rel="import" href="nfsbrowser://downloads/i18n_setup.html">
+<link rel="import" href="nfsbrowser://downloads/item.html">
+
+<dom-module id="downloads-manager">
+  <template>
+    <iron-list id="downloads-list" items="{{items_}}"
+        hidden="[[!hasDownloads_]]">
+      <template>
+        <downloads-item data="[[item]]" hide-date="[[item.hideDate]]">
+        </downloads-item>
+      </template>
+    </iron-list>
+    <div id="no-downloads" hidden="[[hasDownloads_]]">
+    </div>
+    <div id="toolbar">
+      <footer>
+        <span id="new-item" i18n-content="newDownload"
+          on-tap="onNewItemTap_"></span>
+        <span id="clear-all" i18n-content="clearAll"
+          on-tap="onClearAllTap_"></span>
+        <span id="open-setting" i18n-content="openSetting"
+          on-tap="onOpenSettingTap_"></span>
+      </footer>
+    </div>
+  </template>
+  <link rel="import" type="css" href="nfsbrowser://downloads/shared_style.css">
+  <link rel="import" type="css" href="nfsbrowser://downloads/manager.css">
+  <script src="nfsbrowser://downloads/manager.js"></script>
+</dom-module>

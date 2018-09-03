@@ -1,0 +1,79 @@
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>意见反馈</title>
+<link rel="stylesheet" type="text/css" href="css/back.css">
+<script type="text/javascript" src="jquery1.8.3.js"></script>
+</head>
+
+<body>
+
+    <header><h2>意见反馈</h2></header>
+  <div id="feedback">
+      
+        <div class="content">
+        
+            <h4>我们会用心倾听您的宝贵意见，并及时改进产品，为您带来更好的使用体验</h4>
+            
+            <form id="fileinfo">
+              
+                <table border="0">
+                  <tr class="type">
+                    <td>意见分类：</td>
+                    <td><input name="type" type="radio" value="function" checked /><label>功能为题</label><input class="proposal" type="radio" name="type" value="proposal"/><label>改进产品</label></td>
+                  </tr>
+                  <tr class="describe">
+                    <td rowspan="">意见描述：</td>
+                    <td>
+                      <ul>
+                        <li><input type="checkbox" name="tag" value="1" /><label>浏览器崩溃</label></li>
+                        <li><input type="checkbox" name="tag" value="2" /><label>浏览器经常卡死</label></li>
+                        <li><input type="checkbox" name="tag" value="3" /><label>网页打不开</label></li>
+                        <li><input type="checkbox" name="tag" value="4" /><label>网页打开速度慢</label></li>
+                        <li><input type="checkbox" name="tag" value="5" /><label>网页显示异常</label></li>
+                        <li><input type="checkbox" name="tag" value="6" /><label>网页自动跳转</label></li>
+                      </ul>
+                        <div class="area"><textarea name="describe" rows="5"></textarea></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>上传照片：</td>
+                    <td class="file"><span class="btn">选择图片</span><input type="file" name="pic" class="path" accept="image/gif, image/jpeg, image/png" /></td>
+                  </tr>
+                  <tr>
+                    <td>出错网址：</td>
+                    <td><input type="text" name="url" placeholder="请输入出错网址" /></td>
+                  </tr>
+                  <tr>
+                    <td>联系方式：</td>
+                    <td><input type="text" name="contact" placeholder="您可以留下电话或QQ方便联系您！" /></td>
+                  </tr>
+                  <tr>
+                    <td>电子邮箱：</td>
+                    <td><input type="text" name="mail" placeholder="请输入您的电子邮箱" /></td>
+                  </tr>
+                </table>
+                
+                <div class="sbmt"><span class="btn">提交</span><i></i></div>
+                    
+            </form>
+            
+        </div>
+    
+    </div>
+    <script src="feedback.js" type="text/javascript"></script>
+</body>
+</html>

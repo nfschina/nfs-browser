@@ -1,0 +1,60 @@
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+
+<!doctype html>
+<html class="starting-up" i18n-values="dir:textdirection; lang:language">
+
+<head>
+  <meta charset="utf-8">
+  <title i18n-content="title"></title>
+
+  <link rel="stylesheet" type="text/css" href="last_tabs_list.css">
+  <link rel="stylesheet" href="nfsbrowser://resources/css/tree.css">
+  <link rel="stylesheet" href="nfsbrowser://resources/css/widgets.css">
+
+
+  <script src="nfsbrowser://resources/js/cr.js"></script>
+  <script src="nfsbrowser://resources/js/cr/ui.js"></script>
+  <script src="nfsbrowser://resources/js/cr/ui/tree.js"></script>
+  <script src="nfsbrowser://resources/js/load_time_data.js"></script>
+  <script src="nfsbrowser://resources/js/util.js"></script>
+  <script src="nfsbrowser://resources/js/icon.js"></script>
+  <script src="nfsbrowser://last-tabs-list/strings.js"></script>
+  <script src="nfsbrowser://last-tabs-list/last_tabs_list.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav_container">
+      <div class="top_nav">
+        <p>上次未关闭的页面</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content_top">
+        <div class="select_all_container">
+          <input type="checkbox" id="check_all"></input>
+          <span class="select_all">全选</span>
+        </div>
+        <div class="open_selected_tabs">
+          <button class="open_all_selected" id="open_all_selected">打开选中页面</button>
+        </div>
+      </div>
+      <div id="tabs_list" class="tabs_list">
+      </div>
+    </div>
+  </div>
+  <script src="nfsbrowser://resources/js/i18n_template.js"></script>
+</body>
+
+</html>

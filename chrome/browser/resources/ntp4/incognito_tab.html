@@ -1,0 +1,61 @@
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+
+<!doctype html>
+<html i18n-values="dir:textdirection;
+                   bookmarkbarattached:bookmarkbarattached;
+                   lang:language">
+<head>
+  <meta charset="utf-8">
+  <title i18n-content="title"></title>
+  <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="nfsbrowser://theme/IDD_PRIVATEWINDOWICON_N">
+  <!-- <link id="favicon2x" rel="icon" type="image/png" sizes="32x32" href="nfsbrowser://theme/IDD_PRIVATEWINDOWICON_N@2x"> -->
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="incognito_tab.css">
+
+  <script src="nfsbrowser://resources/js/cr.js"></script>
+  <script src="nfsbrowser://resources/js/cr/ui.js"></script>
+  <script src="nfsbrowser://resources/js/util.js"></script>
+
+  <script src="jquery.js"></script>
+  <script src="incognito_tab.js"></script>
+</head>
+<body>
+
+  <div class="content">
+
+  <!-- 搜索框 -->
+    <div id="search-box"></div>
+
+    <!-- 搜索引擎列表 -->
+    <div id='search-content'></div>
+
+    <!-- 联想框 -->
+    <div id="keyword"></div>
+
+    <!-- 隐身图表 -->
+    <div class="icon"></div>
+
+    <!-- 文字描述 -->
+    <div class="info">
+      <p class="head">
+        <span i18n-content="incognitoWelcome"></span>
+        <span class="incognito" i18n-content="incognito"></span>
+        <span i18n-content="incognitoMode"></span>
+      </p>
+      <p class="description" i18n-content="incognitoTabDescription"></p>
+    </div>
+  </div>
+
+</body>
+</html>

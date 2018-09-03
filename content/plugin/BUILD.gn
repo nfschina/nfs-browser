@@ -1,0 +1,79 @@
+# Copyright 2014 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/features.gni")
+
+# This is the NPAPI plugin process. It isn't used on Linux.
+if (enable_plugins) {
+  source_set("plugin") {
+    # Only the public target should depend on this. All other targets (even
+    # internal content ones) should depend on the public one.
+    visibility = [ "//content/public/plugin:plugin_sources",
+      "//content/app:*",
+    ]
+
+    sources = [
+      #"plugin_channel.cc",
+      "plugin_channel.h",
+      "plugin_interpose_util_mac.h",
+      "plugin_interpose_util_mac.mm",
+      #"plugin_main.cc",
+      "plugin_main_mac.mm",
+      #"plugin_thread.cc",
+      "plugin_thread.h",
+      #"webplugin_accelerated_surface_proxy_mac.cc",
+      "webplugin_accelerated_surface_proxy_mac.h",
+      #"webplugin_delegate_stub.cc",
+      "webplugin_delegate_stub.h",
+      #"webplugin_proxy.cc",
+      "webplugin_proxy.h",
+    ]
+
+    if (is_win) {
+      sources += [
+        "../../out/Release/obj/content/plugin/plugin/plugin_channel.obj",
+        "../../out/Release/obj/content/plugin/plugin/plugin_main.obj",
+        "../../out/Release/obj/content/plugin/plugin/plugin_thread.obj",
+        "../../out/Release/obj/content/plugin/plugin/webplugin_delegate_stub.obj",
+        "../../out/Release/obj/content/plugin/plugin/webplugin_proxy.obj",
+      ]
+    } else {
+      sources += [
+        "../../out/Release/obj/content/plugin/plugin/plugin_channel.o",
+        "../../out/Release/obj/content/plugin/plugin/plugin_main.o",
+        "../../out/Release/obj/content/plugin/plugin/plugin_thread.o",
+        "../../out/Release/obj/content/plugin/plugin/webplugin_delegate_stub.o",
+        "../../out/Release/obj/content/plugin/plugin/webplugin_proxy.o",
+      ]
+    }
+
+    configs += [ "//content:content_implementation" ]
+
+    deps = [
+      "//content:export",
+      "//content/child",
+      "//content/public/common:common_sources",
+      #"//mojo/public/interfaces",
+      "//skia",
+      "//third_party/WebKit/public:blink",
+      "//third_party/npapi",
+      "//ui/gfx",
+      "//ui/surface",
+    ]
+
+    if (is_linux) {
+      deps += [
+        "//build/config/linux/gtk2",
+      ]
+    }
+
+    if (is_win) {
+      deps += [ "//sandbox" ]
+    }
+  }
+} else {
+  # This way it can be unconditionally depended on.
+  group("plugin") {
+  }
+}

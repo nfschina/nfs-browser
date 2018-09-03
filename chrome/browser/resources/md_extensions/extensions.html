@@ -1,0 +1,29 @@
+<!doctype html>
+<html dir="$i18n{textdirection}" lang="$i18n{language}">
+<head>
+  <meta charset="utf8">
+  <title>$i18n{title}</title>
+  <link rel="import" href="nfsbrowser://resources/html/polymer.html">
+  <link rel="import" href="nfsbrowser://extensions/manager.html">
+  <link rel="stylesheet" href="nfsbrowser://resources/css/md_colors.css">
+  <style>
+    html {
+      background: var(--md-background-color);
+    }
+
+    html,
+    body {
+      font-family: Roboto;
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <extensions-manager></extensions-manager>
+  <link rel="import" href="nfsbrowser://resources/html/load_time_data.html">
+  <link rel="import" href="nfsbrowser://extensions/strings.html">
+  <link rel="import" href="nfsbrowser://extensions/service.html">
+  <script src="nfsbrowser://extensions/extensions.js"></script>
+</body>
+</html>

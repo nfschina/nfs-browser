@@ -1,0 +1,23 @@
+[{
+  "namespace":"checkmurl",
+  "functions":[
+      {
+    "name":"checkurl",
+    "type":"function",
+    "description":"check url is malicious or not.",
+    "parameters": [{
+        "name":"turl",
+        "type":"string",
+        "description":"turl is url of check"
+    },
+    {
+       "name":"callback",
+       "type":"function",
+       "parameters":[{
+          "name": "result",
+          "type": "integer",
+          "description": "result of detection url."
+       }]
+    }]
+  }]
+}]

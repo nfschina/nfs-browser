@@ -1,0 +1,21 @@
+diff a/chrome/browser/resources/account_login/account_login.html b/chrome/browser/resources/account_login/account_login.html	(rejected hunks)
+@@ -36,16 +36,12 @@
+           <td><p id="auto_sync">已自动同步以下内容</p></td>
+         </tr>
+         <tr>
+-          <td><label id = "checkbox_1" for="bookmark"><input type="checkbox" id="bookmark" checked="checked" /> 收藏夹</label></td>
+-          <td><label id = "checkbox_2" for="skin"><input type="checkbox" id="skin" checked="checked" /> 皮肤</label><br /></td>
++          <td><label id = "checkbox_1" for="bookmark"><input type="checkbox" id="bookmark" checked="checked"/> 收藏夹</label></td>
++          <td><label id = "checkbox_2" for="skin"><input type="checkbox" id="skin" checked="checked"/> 皮肤</label><br /></td>
+         </tr>
+-
+-        <!--
+         <tr>
+-          <td><label id = "checkbox_3" for="password"><input type="checkbox" id="password" checked="checked" /> 密码和表单</label></td>
++          <td><label id = "checkbox_3" for="password_checkbox"><input type="checkbox" id="password_checkbox" checked="checked"/> 密码和表单</label></td>
+         </tr>
+-
+-        -->
+       </table>
+       <br />
+       <div id="btn">

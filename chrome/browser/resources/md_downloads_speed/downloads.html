@@ -1,0 +1,41 @@
+<!doctype html>
+<html i18n-values="dir:textdirection;lang:language">
+<head>
+<meta charset="utf-8">
+<title i18n-content="title"></title>
+<link rel="stylesheet" href="nfsbrowser://resources/css/text_defaults_md.css">
+  <style>
+    html {
+      background: rgb(236, 239, 241);
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      margin: 0;
+    }
+
+    down-task{ 
+    	overflow: hidden;
+    	/*display: flex;
+    	flex-flow: column;*/
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>     
+
+  <downloads-manager id="down-task"></downloads-manager>
+  <link rel="import" href="nfsbrowser://resources/html/polymer.html">
+  <link rel="import" href="nfsbrowser://downloads/i18n_setup.html">
+  <link rel="import" href="nfsbrowser://downloads/manager.html">
+  <link rel="import" href="nfsbrowser://resources/html/i18n_template.html">
+</body>
+</html>

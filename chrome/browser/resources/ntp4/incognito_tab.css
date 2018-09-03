@@ -1,0 +1,179 @@
+/**
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+ *
+**/
+
+body{
+  color: rgb(51, 51, 51);
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 0;
+  font-family: "文泉驿微米黑";
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  content: url(../../../../ui/webui/resources/nfs/images/incognito_splash.png);
+  height: 196px;
+  width: 196px;
+  margin: 100px auto 50px;
+}
+
+/** 搜索框样式 **/
+#search-box{
+  height: 38px;
+  width: 400px;
+  padding: 0 12px;
+  margin: 0 auto;
+  border: 1px solid rgb(204, 204, 204);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-engine {
+  width: 44px;
+  height: 16px;
+}
+
+#search-input {
+  width: 354px;
+  display: flex;
+}
+
+#search-input input{
+  outline: none;
+  line-height: 24px;
+  height: 24px;
+  border: 0 none;
+  padding: 0 6px;
+  width: 310px;
+}
+
+#search-input span{
+  background-image: url(images/new_tab_icons.png);
+  background-position: 0 -46px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
+}
+
+#engine-logo {
+  height: 16px;
+  width: 44px;
+  display: block;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+#engine-logo span {
+  background-image: url(images/new_tab_icons.png);
+    background-position: 20px -22px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+}
+
+#search-content{
+  display: none;
+  position: absolute;
+  left: 7px;
+  top: 41px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  width: 100px;
+  padding: 2px 0;
+}
+
+#search-content li{
+  list-style: none;
+  line-height: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-position-x: 10px;
+  font-size: 14px;
+  padding: 0 12px;
+  background-size: 16px 16px;
+  text-indent: 20px;
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;  /*文字溢出时自动隐藏*/
+  white-space: nowrap;  /*不换行*/
+}
+
+#search-content li:hover{
+  /*background-color: rgb(221, 221, 221);*/
+  background-color: rgb(222, 236, 255);
+}
+
+#search-content li[sld]{
+  background-color: rgb(222, 236, 255);
+}
+
+.content{
+  position: relative;
+  width: 440px;
+  margin: 100px auto 0;
+}
+
+.info{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info .head{
+  font-size: 30px;
+  line-height: 50px;
+  color: #333;
+}
+
+.info .head .incognito {
+  color: #4380d0;
+}
+
+.info .description{
+  font-size: 16px;
+  line-height: 28px;
+  color: #999;
+  margin-top: 24px;
+}
+
+/*联想框样式*/
+#keyword {
+  display: none;
+  height: auto;
+  position: absolute;
+  left: 7px;
+  top: 40px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  width: 424px;
+  padding: 3px 0;
+  border-top: 0 none;
+}
+
+#keyword span{
+  display: block;
+  clear: both;
+  width: 424px;
+  height: 30px;
+  text-indent:15px;
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  /*border-bottom:dashed 1px #cccccc;*/
+}
+

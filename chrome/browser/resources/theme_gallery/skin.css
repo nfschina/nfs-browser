@@ -1,0 +1,40 @@
+*{
+	margin:0;
+	padding:0;
+}
+img{
+	vertical-align:middle;
+}
+
+header{ border-bottom:1px solid #CCC;}
+h3{ width:975px; margin:0 auto; font-size:18px; font-weight:100; line-height:70px; text-indent:8px; color:#333;}
+
+#skin-main{ width:975px; padding:7px 0; margin:0 auto; -moz-user-select: none;}
+
+#classic li{ width:460px; height:230px; background-image:url(../img/0.jpg);}
+#classic div{ width:460px; height:230px;}
+
+h4{ margin-top:15px; font-size:14px; font-weight:100; line-height:30px; text-indent:8px; color:#333;}
+
+.skin-list{ overflow:auto;}
+.skin-list li{ float:left; display:inline-block; width:310px; height:175px; margin:8px 7px 8px 7px; background-repeat:no-repeat;}
+.skin-list div{ width:310px; height:175px; display:flex; align-items:center; justify-content:center;}
+
+.skin-list span{ width:76px; height:25px; border:1px solid #FFF; font-size:14px; line-height:25px; text-align:center; color:#FFF; cursor:pointer; background-repeat:no-repeat; background-position:center; background-position:center;}
+.skin-list em{ width:30px; height:30px; background:url(../img/defaultskin.png) no-repeat;}
+
+.skin-list div[data-used = "1"]{  align-items:flex-end; justify-content:flex-end;}
+.skin-list div em, .skin-list span{ display:none;}
+.skin-list li div[data-used = "2"] span{ display:block; background-size:14px 14px; cursor:default;}
+.skin-list li div[data-used = "2"] span img{ animation:mymove 1s linear 0s infinite;}
+@keyframes mymove
+{
+from { transform:rotate(0deg);}
+to { transform:rotate(359deg);}
+}
+
+
+.skin-list div[data-used = "1"] em{ display:block;}
+.skin-list li div[data-used = "2"]{ background-color:rgba(0,0,0,0.5);}
+.skin-list li:hover div[data-used = "0"]{ background-color:rgba(0,0,0,0.5);}
+.skin-list li:hover div[data-used = "0"] span{ display:block;}

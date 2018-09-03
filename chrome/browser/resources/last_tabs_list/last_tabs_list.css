@@ -1,0 +1,105 @@
+/**
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+ *
+**/
+
+body {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  color: #333;
+}
+
+.nav_container::after {
+  display: block;
+  height: 1px;
+  content: ' ';
+  background-color: #eee;
+}
+
+.top_nav,
+.content {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.top_nav {
+  font-size: 18px;
+  line-height: 70px;
+  height: 70px;
+}
+
+.tabs_list input[type='checkbox'] {
+  margin-top: 1px;
+}
+
+.content_top {
+  overflow: hidden;
+}
+
+.select_all {
+  font-size: 14px;
+  line-height: 60px;
+  height: 60px;
+  padding-left: 9px;
+  color: #666;
+}
+
+.select_all_container {
+  float: left;
+}
+
+.open_selected_tabs {
+  float: right;
+  padding-top: 20px;
+}
+
+.content_top .open_selected_tabs button {
+  font-size: 14px;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.tabs_list {
+  line-height: 16px;
+}
+
+.tab_container {
+  line-height: 16px;
+  display: flex;
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.tabs_list .favicon {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 16px;
+  flex-shrink: 0;
+  -webkit-margin-end: 10px;
+  -webkit-margin-start: 10px;
+}
+
+.tabs_list a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #666;
+  outline: none;
+}
+
+.tabs_list a:hover {
+  text-decoration: underline;
+}

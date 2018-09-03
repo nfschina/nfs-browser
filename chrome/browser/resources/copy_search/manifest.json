@@ -1,0 +1,15 @@
+{
+   "default_locale": "en",
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "copySearch.js", "jquery-3.3.1.min.js" ],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+   } ],
+   "description": "Search and Copy Menu emerge when you select text on a web page.",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHFne/lu8qUvX0YCh2XDt9Z5wbshZ9N1VoORB574R5n8wAxduugBF/Rwh5uWb2z+SAZXDviZoZkT0dj/bLZ6Z1sDbNN/1BhMOtI1DWVTgi6zzptXDNYQkRMQoLXeFzmNptIJVucmImHpRsTC4JgKR1R1TDzlU5rlyI5neDlmxKPwIDAQAB",
+   "manifest_version": 2,
+   "name": "Search and Copy",
+   "permissions": [ "accessPreference", "activeTab", "<all_urls>"],
+   "version": "1.0.0"
+}

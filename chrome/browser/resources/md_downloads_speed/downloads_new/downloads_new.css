@@ -1,0 +1,194 @@
+/**
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+ *
+**/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.newdownload{
+  -webkit-user-select: none;
+}
+
+.newform {
+  padding:8px 20px;
+}
+
+.newform td { 
+  line-height:40px; 
+  font-size:14px;
+}
+
+.newform input { 
+  display:inline-block;
+  line-height: normal; 
+  height:22px; 
+  padding:0 5px; 
+  width:320px; 
+  border-spacing:0; 
+  border:1px solid #CCC;
+  outline: none;
+}
+
+.newform input[empty] { 
+  border-color:#f30;
+}
+
+.newform label {  
+  display:inline-block; 
+  line-height:22px; 
+  height:22px; 
+  width:60px; 
+  text-align:center; 
+  margin-left:10px; 
+  border:1px solid #CCC; 
+  background-color:#FFF; 
+  border-spacing:0; 
+  cursor:pointer;
+}
+
+.newform label:hover { 
+  border-color: #959595;
+}
+
+.newform label:active { 
+  background-color:#e0dfdf;
+  border-color: #8e8e8e;
+}
+
+.newdownload { 
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.newdownload .new-path { 
+  width:232px; 
+  padding-right:18px; 
+  background:url(../img/downico.png) no-repeat 242px -523px; 
+  cursor:pointer;
+}
+
+.select-path { 
+  display:none;
+  position:absolute;
+  left:94px;
+  top:138px;
+  width:254px; 
+  border:1px solid #CCC; 
+  background-color:#FFF; 
+  z-index:9;
+}
+
+.select-path ul { 
+  padding:4px 0;
+  height: 66px;
+  overflow: hidden;
+}
+
+.select-path li { 
+  line-height:22px; 
+  padding:0 5px; 
+  cursor:pointer;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  height: 22px;
+  font-size:14px;
+}
+
+.select-path li:hover { 
+  background-color:#ddecff;
+}
+
+.newsubmit { 
+  display: flex;
+  padding: 10px 40px 10px 24px; 
+  font-size:14px; 
+  height: 30px;
+  align-items: center;
+}
+
+.newsubmit span { 
+  padding:0 12px; 
+  border:1px solid #ccc; 
+  background-color:#FFF; 
+  cursor:pointer;
+  margin-left: 16px;
+  display: inline-block;;
+  height: 28px;
+  line-height: 28px;
+}
+
+.newsubmit span:hover { 
+  border-color: #959595;
+}
+
+.newsubmit span:active { 
+  background-color:#e0dfdf;
+  border-color: #8e8e8e;
+}
+
+.newsubmit .ok { 
+  border-color:#4fa7ff; 
+  background-color:#deecff;
+}
+
+.newsubmit span.ok:hover { 
+  background-color:#e9f2ff;
+  border-color: #86c3ff;
+}
+
+
+.newsubmit span.ok:active { 
+  background-color:#afd7f1;
+  border-color: #3e82c6;
+}
+
+.newsubmit .d { 
+  border-color:#ccc !important; 
+  background-color:#FFF !important;
+  color: #CCC !important;
+}
+
+
+.newsubmit em{
+  flex: 1;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #F30;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 13px;
+}
+
+.downinfosize{
+  position: relative;
+}
+
+.downinfosize span{
+	position:absolute;
+	right:106px;
+	top:11px;
+	height:20px;
+	background-color:#FFF;
+	color:#666;
+	font-size:12px;
+	font-weight:100;
+	line-height:20px;  
+	z-index:1; 
+	pointer-events:none;  
+}
+
+em[hidden]{
+  visibility: hidden;
+}

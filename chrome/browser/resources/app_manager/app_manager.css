@@ -1,0 +1,252 @@
+*{ margin: 0; padding: 0; }
+
+body{
+  font-size: 12px;
+  line-height: 24px;
+}
+
+a{
+  outline: none;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.clearfix{
+  overflow: auto;
+}
+
+header{
+  height: 28px;
+  padding-top: 14px;
+}
+
+header h4{
+  padding: 0 20px;
+  border-bottom: 1px solid #DDD;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+header h4 span{
+  display: inline-block;
+  min-width: 68px;
+  max-height: 88px;
+  text-align: center;
+  height: 28px;
+  margin-bottom: -1px;
+  border:1px solid #FFF;
+  border-bottom-color: #DDD;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+header h4 span[data-sld]{
+  border-color: #DDD;
+  border-bottom-color: #FFF;
+  font-weight: 700;
+  cursor: default;
+}
+
+section{
+  height: 288px;
+  overflow-y: auto;
+}
+
+#install{
+  padding: 6px 0 36px 4px;
+  display: none;
+}
+
+#set{
+  display: none;
+}
+
+#install li{
+  float: left;
+  display: inline-block;
+  width: 64px;
+  height: 92px;
+  border: 1px solid #FFF;
+  margin-left: 28px;
+  margin-top: 30px;
+}
+
+#install dt{
+  text-align: center;
+  line-height: 28px;
+  font-size: 12px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#install dd{
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-color: #EEE;
+}
+
+#install dd img{
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+#install .gray{
+  filter: grayscale(100%);
+}
+
+#install .add dd{
+  background: url(img/add.png) no-repeat center center;
+  border: 1px solid #DDD;
+  box-sizing: border-box;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+#install .add a{
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+#install .add dd:hover{
+  background-color: #DDD;
+}
+
+#install li.edit{
+  border-color: #0082e2;
+}
+
+#install li.edit dt{
+  background-color: #0082e2;
+  color: #FFF;
+}
+
+#recommend{
+  display: block;
+  height: 288px;
+}
+
+#recommend li{
+  display: flex;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 0 8px 0 20px;
+  border-bottom: 1px solid #DDD;
+  align-items: center;
+}
+
+#recommend .ico{
+  width: 48px;
+  height: 48px;
+}
+
+#recommend .ico img{
+  height: 48px;
+  width: 48px;
+  border-radius: 6px;
+}
+
+#recommend .des{
+  height: 48px;
+  width: 416px;
+  margin-left: 10px;
+}
+
+#recommend .des h6{
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 26px;
+}
+
+#recommend .des p{
+  font-size: 12px;
+  line-height: 22px;
+  color: #666;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#recommend .opr{
+  width: 68px;
+  margin-left: 12px;
+}
+
+#recommend .opr span{
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  color: #FFF;
+  text-align: center;
+  background-color: #0082e2;
+  cursor: pointer;
+}
+
+#recommend .opr span:hover{
+  background-color: #0172c5;
+}
+
+footer{
+  height: 28px;
+  padding: 11px 30px;
+  background-color: #EEE;
+}
+footer a{
+  display: block;
+  border: 1px solid #BBB;
+  line-height: 28px;
+  text-align: center;
+  background-color: #FFF;
+  width: 100px;
+  font-size: 14px;
+  font-weight: 100;
+  color: #333;
+  cursor: pointer;
+}
+
+footer a:hover{
+  border-color: #999;
+}
+
+footer a:active{
+  background-color: #DDD;
+}
+
+#app-main{
+  width: 600px;
+}
+
+#menu-list{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 380px;
+  z-index: 1;
+}
+#menu-list ul{
+  position: absolute;
+  padding: 4px 0;
+  width: 148px;
+  /*height: 56px;*/
+  border: 1px solid #BBB;
+  background-color: #FFF;
+  z-index: 2;
+}
+#menu-list li{
+  line-height: 28px;
+  color: #333;
+  padding: 0 10px;
+}
+#menu-list li:hover{
+  background-color: #deecff;
+}

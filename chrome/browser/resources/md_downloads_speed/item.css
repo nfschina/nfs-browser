@@ -1,0 +1,413 @@
+/* Copyright 2015 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+#date {
+  color: rgb(104, 113, 116);
+  font-size: 100%;
+  font-weight: 500;
+  margin: 24px auto 10px;
+  width: var(--downloads-item-width);
+}
+
+#date:empty {
+  display: none;
+}
+
+#content {
+  background: white;
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  border-bottom: 1px solid #DDD;
+  align-items: center;
+}
+
+#content.is-active {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05), 0 1px 1px 0 rgba(0, 0, 0, .08),
+              0 1px 1px -2px rgba(0, 0, 0, .2);
+
+}
+
+#content:not(.is-active) {
+  background: rgba(255, 255, 255, .6);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .03), 0 1px 1px 0 rgba(0, 0, 0, .048),
+              0 1px 1px -2px rgba(0, 0, 0, .12);
+}
+
+#content:hover { 
+  background-color: #f2f3f5;
+}
+
+
+/*#content:active { 
+  background-color: #deecff;
+}*/
+
+#details {
+  -webkit-padding-end: 16px;
+  -webkit-padding-start: 10px;
+  /*display: flex;*/
+  flex: 1;
+  flex-direction: column;
+  /*padding-bottom: 12px;
+  padding-top: 12px;*/
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#operation {
+  display: flex;
+  width: 22px;
+  height: 70px;
+  line-height: 70px;
+  flex-direction: row;
+  overflow: hidden;
+  text-align: right;
+}
+
+#operation-open {
+  display: flex;
+  /*width: 200px;*/
+  height: 70px;
+  line-height: 70px;
+  flex-direction: row;
+  overflow: hidden;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon-wrapper {
+  /*align-self: flex-start;
+  flex: none;*/
+  justify-content: center;
+  /*vertical-align: middle;*/
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.icon {
+  height: 32px;
+  width: 32px;
+  -webkit-user-drag: none;
+}
+
+#danger-icon {
+  height: 32px;
+  width: 32px;
+}
+
+#danger-icon[icon='warning'] {
+  color: rgb(255, 193, 7);
+}
+
+#danger-icon[icon='remove-circle'] {
+  color: rgb(244, 67, 54);
+}
+
+#name,
+#file-link {
+  max-width: 100%;
+}
+
+#name,
+#file-name {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 100;
+}
+
+#show,
+#file-link {
+  font-size: 13px;
+  color: #363636;
+  padding-left: 20px;
+}
+
+#name {
+  flex: 1;
+  color: #333;
+  -webkit-margin-end: 12px;  /* Only really affects #tag. */
+}
+
+#file-link:focus {
+  outline:none;  
+}
+
+#title-area{
+  font-size: 14px;
+  color: #333;
+}
+
+#info-area{
+  font-size: 12px;
+  color: #999;
+}
+
+#title-area,
+#info-area {
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  line-height: 18px;
+}
+
+#resume,
+.is-active :-webkit-any(#pause) {
+  color: rgb(51, 103, 214);
+}
+
+#retry {
+  color:  rgb(51, 103, 214);
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+#retry:hover{
+  text-decoration: underline;
+}
+
+#retry:active{
+  text-decoration: underline;
+}
+
+#safe {
+  margin: 0;
+  padding: 0;
+  /*width: 160px;*/
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+#safe-open {
+  margin: 0;
+  padding: 0;
+  /*width: 200px;*/
+  height: 40px;
+  line-height: 40px;
+}
+
+/*#wait {
+  display:inline-block; !important;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 70px;
+  display: inline-block;;
+  text-align: center;
+}
+
+#speed {
+  display:inline-block; !important;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 70px;
+  display: inline-block;;
+  text-align: center;
+}
+*/
+/*#wait{
+  color: #f60;
+}*/
+
+#resume{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 22px;
+  /*margin-left: 12px;*/
+  height: 22px;
+  background: url("img/downico.png") no-repeat 0px -200px;
+}
+
+#resume:hover{
+  background-position: -50px -200px;
+}
+
+
+#resume:active{
+  background-position: -100px -200px;
+}
+
+#pause{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 22px;
+  /*margin-left: 12px;*/
+  height: 22px;
+  background: url("img/downico.png") no-repeat -0px -250px;
+}
+
+#pause:hover{
+  background-position: -50px -250px;
+}
+
+
+#pause:active{
+  background-position: -100px -250px;
+}
+
+#file-link{
+  background:  url("img/downico.png") no-repeat 2px -418px;
+}
+
+#show {
+  margin-left: 15px;
+  background: url("img/downico.png") no-repeat 0 -468px;
+}
+
+#show:focus {
+  outline:none;  
+}
+
+#tag {
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+#url {
+  color: inherit;
+  margin-top: 6px;
+  min-height: 0;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.is-active #url {
+  color: #969696;
+}
+
+/*,#description:not(:empty),
+.controls*/
+#progress {
+  margin: 4px 0;
+}
+
+#info-area {
+  color: #999;
+}
+
+.is-active #description {
+  color: #9999;
+}
+
+.is-active #speed {
+  color: #9999;
+}
+
+.dangerous #description {
+  color: rgb(239, 108, 0);
+}
+
+#progress {
+  --paper-progress-active-color: rgb(54, 126, 237);
+  --paper-progress-container-color: rgb(223, 222, 223);
+  width: auto;
+}
+
+.controls {
+  -webkit-margin-start: 0em;
+}
+
+#cancel,
+.keep,
+.discard {
+  color: #5a5a5a;
+}
+
+#controlled-by {
+  -webkit-margin-start: 8px;
+}
+
+#controlled-by,
+#controlled-by a {
+  color: #5a5a5a;
+}
+
+.is-active #controlled-by {
+  color: #333;
+}
+
+.is-active #controlled-by a {
+  color: rgb(51, 103, 214);
+}
+
+#remove-wrapper {
+  /*align-self: flex-start;*/
+  margin: 0;
+  width: 18px;
+  margin: 0 20px;
+}
+
+#remove {
+  height: 16px;
+  width: 16px;
+  background: url("img/downico.png") no-repeat 0px -300px;
+}
+
+#remove:hover{
+  background-position: -50px -300px;
+}
+
+#remove:hover{
+  background-position: -100px -300px;
+}
+
+#incognito {
+  bottom: 20px;
+  content: -webkit-image-set(
+      url(nfsbrowser://downloads/1x/incognito_marker.png) 1x,
+      url(nfsbrowser://downloads/2x/incognito_marker.png) 2x);
+  position: absolute;
+  right: 10px;
+}
+
+
+
+/*modify 2017*/
+#info-area .downloading{
+  display: flex;
+}
+
+#info-area .complete{
+  margin: 10px 0 3px;
+}
+
+#wait, #speed {
+  flex: 1;
+}
+
+#info-tip_failed {
+  color: #ff0000;
+}
+
+paper-progress {
+  --paper-progress-height: 6px;
+}
+
+#content[data-sld] {
+  background-color: #deecff !important;
+}

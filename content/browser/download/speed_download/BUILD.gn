@@ -1,0 +1,95 @@
+config("speed_download_config") {
+  if (is_linux) {
+    cflags = [
+      "-Wno-unused-result",
+    ]
+
+    cflags_cc = [
+      "-Wno-unused-result",
+    ]
+  }
+}
+
+static_library("speed_download") {
+
+  if (is_win) {
+    sources = [
+      #"client/windows/apx_hftsc.c",
+      "client/windows/apx_hftsc.h",
+      #"client/windows/apx_user.c",
+      "client/windows/apx_user.h",
+      #"client/windows/apx_config.c",
+      "client/windows/apx_config.h",
+      #"client/windows/apx_file.c",
+      "client/windows/apx_file.h",
+      #"client/windows/apx_network_deteck.c",
+      #"client/windows/apx_transfer_cl.c",
+      "client/windows/apx_transfer_cl.h",
+      #"client/windows/apx_transfer_a2.cc",
+      "client/windows/apx_transfer_a2.h",
+      #"client/windows/apx_task.c",
+      "client/windows/apx_task.h",
+
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_hftsc.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_user.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_config.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_file.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_network_deteck.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_transfer_cl.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_transfer_a2.obj",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_task.obj",
+    ]
+  } else {
+    sources = [
+     #"client/linux/apx_wlog.c",
+
+      "client/linux/apx_wlog.h",
+      #"client/linux/apx_hftsc.c",
+      "client/linux/apx_hftsc.h",
+      #"client/linux/apx_user.c",
+      "client/linux/apx_user.h",
+      #"client/linux/apx_config.c",
+      "client/linux/apx_config.h",
+      #"client/linux/apx_file.c",
+      "client/linux/apx_file.h",
+      #"client/linux/apx_network_deteck.c",
+      #"client/linux/apx_transfer_cl.c",
+      "client/linux/apx_transfer_cl.h",
+      #"client/linux/apx_transfer_a2.cc",
+      "client/linux/apx_transfer_a2.h",
+      #"client/linux/apx_task.c",
+      "client/linux/apx_task.h",
+
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_wlog.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_hftsc.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_user.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_config.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_file.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_network_deteck.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_transfer_cl.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_transfer_a2.o",
+      "../../../../out/Release/obj/content/browser/download/speed_download/speed_download/apx_task.o",
+    ]
+  }
+
+  if (is_win) {
+    defines = [ "CURL_STATICLIB" ]
+  }
+
+  deps = [
+    "//third_party/curl:libcurl",
+    "//third_party/uci:uci",
+  ]
+  if (is_linux) {
+   deps += [ "//third_party/aria2:aria2" ]
+  }
+  if (is_win) {
+    deps += [ "//third_party/zlib:zlib" ]
+  }
+
+  include_dirs = [ "//" ]
+
+  configs += [
+    ":speed_download_config",
+  ]
+}

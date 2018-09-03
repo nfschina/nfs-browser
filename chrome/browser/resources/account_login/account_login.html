@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>登录</title>
+  <meta charset="utf8">
+
+  <link rel="stylesheet" href="account_login.css">
+
+  <script src="nfsbrowser://resources/js/cr.js"></script>
+  <script src="nfsbrowser://resources/js/util.js"></script>
+  <script src="js/account_login.js"></script>
+
+</head>
+
+<body>
+  <div id="login-page" class="page" hidden>
+    <div class="form">
+      <form class="login-form">
+        <input type="text" placeholder="用户名（网络账户邮箱）" id="email" name="email" />
+        <input type="password" placeholder="密码" id="password" name="password" />
+      </form>
+      <br />
+      <button id="submit">登录</button>
+      <p></p>
+      <span id="result"></span>
+    </div>
+  </div>
+  <div id="manage-page" class="page" hidden>
+    <div class="manage">
+      <table id="option" border="0" >
+        <tr>
+          <td><div id="email-name"><span></span></div></td>
+        </tr>
+        <tr>
+          <td><p id="auto_sync">已自动同步以下内容</p></td>
+        </tr>
+        <tr>
+          <td><label id = "checkbox_1" for="bookmark"><input type="checkbox" id="bookmark" checked="checked" /> 收藏夹</label></td>
+          <td><label id = "checkbox_2" for="skin"><input type="checkbox" id="skin" checked="checked" /> 皮肤</label><br /></td>
+        </tr>
+        <tr>
+          <td><label id = "checkbox_3" for="password_checkbox"><input type="checkbox" id="password_checkbox" checked="checked"/> 密码和表单</label></td>
+        </tr>
+      </table>
+      <br />
+      <div id="btn">
+        <button id="sync-btn">立即同步</button>
+        <button id="logout-btn">退出登录</button>
+      </div>
+      <div id="copy-link">
+        <span>分享浏览器给您的朋友</span>
+        <span style="color: blue;">(点击复制分享链接)</span>
+      </div>
+      <div id="btn-copy" hidden>
+        <button id="share-btn">已复制成功</button>
+      </div>
+      <div id="btn-sync" hidden>
+        <button id="success-btn">已同步成功</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

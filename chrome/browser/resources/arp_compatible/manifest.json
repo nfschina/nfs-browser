@@ -1,0 +1,14 @@
+{   
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "main.js" ],
+      "css": [ "styles.css" ],
+      "matches": [ "http://172.31.58.20:9070/*", "https://172.31.58.20:9070/*", "http://www.12333sh.gov.cn/*",  "http://law.npc.gov.cn/*"],
+      "run_at": "document_end"
+   } ],
+
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5muH+m4fkzqoBmFTmE/wEnDL+jcPRyRRqnNidtFzpuj3ptYPcu7bJGC615JHbdIIS95Sg4BGgsMWuW3xqnaWgC7y9esubUv82F40W/UR37rQqBSHfcMPf6FvligZw8l9tBOqerAATWcPuqO8fDN/FUmq3KJlJgwOLcGoW+u0EWQIDAQAB",
+   "manifest_version": 2,
+   "name": "arp-compatible",
+   "version": "1.0.0"
+}

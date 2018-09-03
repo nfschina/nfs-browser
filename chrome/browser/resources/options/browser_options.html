@@ -1,0 +1,860 @@
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+
+<!doctype html>
+<html id="t" i18n-values="dir:textdirection">
+  <div id="settings" class="page">
+    <!-- <body i18n-values=".style.fontFamily:fontfamily;"> -->
+    <body style="font-family: "Noto Sans CJK SC", "Source Han Sans CN", "Microsoft YaHei";">
+      <div id="basic-setting-list">
+        <!-- <include src="automatic_settings_reset_banner.html"> -->
+        <if expr="not chromeos">
+          <include src="startup_section.html">
+        </if>
+        <!-- 关闭浏览器 -->
+        <section id="closebrowser-section">
+          <h3 i18n-content="CloseBrowser">
+          </h3>
+          <div id="closebrowser-section">
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.closemultitabs"><span>
+                  <span i18n-content="CloseMultiTabsNotice"></span><span class="controlled-setting-indicator" pref="browser.closemultitabs"></span> </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="close.clearbrowserdata"><span><span i18n-content="CloseMultiTabsClearData"></span><span class="controlled-setting-indicator" pref="close.clearbrowserdata">
+                 </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+        <!-- 搜索引擎 -->
+        <section id="search-section">
+          <h3 i18n-content="sectionTitleSearch">
+          </h3>
+          <div id="search-section-content">
+            <div class="settings-row">
+              <label>
+                <span i18n-content="default_search_engine" ></span>
+              </label><select id="default-search-engine" class="weakrtl" aria-labelledby="default-search-engine-label">
+              </select> <span class="controlled-setting-indicator" pref="default_search_provider_data.template_url_data"></span><button id="manage-default-search-engines" i18n-content="defaultSearchManageEngines">
+              </button>
+            </div>
+            <div id="google-now-launcher" hidden>
+              <div class="checkbox">
+                <label>
+                  <input pref="google_now_launcher.enabled" type="checkbox"><span i18n-content="googleNowLauncherEnable"></span>
+                </label>
+              </div>
+            </div>
+            <div id="hotword-always-on-search" hidden>
+              <div class="checkbox controlled-setting-with-label">
+                <label>
+                  <input id="hotword-always-on-search-checkbox" pref="hotword.always_on_search_enabled"
+                  type="checkbox"><span i18n-content="hotwordSearchEnable"></span>
+                </label>
+                <a target="_blank" class="hotword-link" i18n-content="learnMore" i18n-values="href:hotwordLearnMoreURL">
+                </a>
+                <span id="hotword-always-on-search-setting-indicator" pref="hotword.always_on_search_enabled"
+                dialog-pref>
+                </span>
+                <div>
+                  <span class="setting-extra-description" i18n-content="hotwordAlwaysOnDesc">
+                  </span>
+                  <a id="hotword-retrain-link" is="action-link" i18n-content="hotwordRetrainLink"
+                  hidden>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="hotword-no-dsp-search" hidden>
+              <div class="checkbox controlled-setting-with-label">
+                <label>
+                  <input id="hotword-no-dsp-search-checkbox" pref="hotword.search_enabled_2"
+                  type="checkbox"><span i18n-content="hotwordSearchEnable"></span>
+                </label>
+                <a target="_blank" class="hotword-link" i18n-content="learnMore" i18n-values="href:hotwordLearnMoreURL">
+                </a>
+                <span id="hotword-no-dsp-search-setting-indicator" pref="hotword.search_enabled_2"
+                dialog-pref>
+                </span>
+                <div>
+                  <span class="setting-extra-description" i18n-content="hotwordNoDSPDesc">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="audio-history" hidden>
+              <div class="settings-row">
+                <label class="hotword-audio-history">
+                  <span id="audio-history-label">
+                  </span>
+                </label>
+                <a target="_blank" class="hotword-link" i18n-content="hotwordAudioHistoryManage"
+                i18n-values="href:hotwordManageAudioHistoryURL">
+                </a>
+              </div>
+              <div class="settings-row" id="audio-history-always-on-description">
+                <span class="setting-extra-description" i18n-content="hotwordAlwaysOnAudioHistoryDescription">
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 自定义标签页面 -->
+        <section id="appearance-section">
+          <h3 i18n-content="sectionTitleAppearance">
+          </h3>
+          <div id="appearance-section">
+            <div id="change-home-page-section" hidden>
+              <div id="change-home-page-section-container" guest-visibility="disabled">
+                <span id="home-page-ntp" class="home-page-label" i18n-content="homePageNtp">
+                </span>
+                <span id="home-page-url" class="home-page-label">
+                </span>
+                <a is="action-link" id="change-home-page" i18n-content="changeHomePage">
+                </a>
+                <div id="extension-controlled-container">
+                </div>
+              </div>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="bookmark_bar.show_on_all_tabs" metric="Options_ShowBookmarksBar"><span><span i18n-content="toolbarShowBookmarksBar"></span><span class="controlled-setting-indicator" pref="bookmark_bar.show_on_all_tabs"></span></span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input id="show-searchbar" type="checkbox" pref="browser.show_searchbar"><span i18n-content="toolbarShowSearchBar">
+                </span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input id="show-toolbar" type="checkbox" pref="browser.show_toolbar"><span i18n-content="toolbarShowToolBar">
+                </span>
+              </label>
+            </div>
+            <!-- <if expr="is_posix and not chromeos and not is_macosx">
+            <div class="checkbox"><label>
+            <input id="show-window-decorations" type="checkbox"
+            pref="browser.custom_chrome_frame" metric="Options_CustomFrame"
+            inverted_pref>
+            <span i18n-content="showWindowDecorations"></span>
+            </label></div>
+            </if> -->
+          </div>
+        </section>
+        <if expr="not chromeos">
+          <section id="set-default-browser-section">
+            <h3 i18n-content="sectionTitleDefaultBrowser">
+            </h3>
+            <div id="set-default-browser-section">
+              <if expr="not is_win">
+                <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+                  <label>
+                    <input type="checkbox" pref="browser.check_defalutbrowser"><span><span i18n-content="Enable Browser Check"></span><span class="controlled-setting-indicator" pref="browser.check_defalutbrowser">
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </if>
+              <div>
+                <button style="margin-left: 0;" id="set-as-default-browser" i18n-content="defaultBrowserUseAsDefault">
+                </button><span style=" margin-left: 10px;" id="default-browser-state">
+                </span>
+              </div>
+            </div>
+          </section>
+        </if>
+     <!--    <section id="set- browser-mode-section">
+        <h3 i18n-content="sectionBrowsingMode"></h3>
+        <div id="set- browser-mode-section">
+        <div class="radio controlled-setting-with-label"
+        id="browser-section-mode" guest-visibility="disabled">
+        <label>
+        <input type="radio" name="browsermode" value="0"
+        pref="browser.browsing_mode"
+        metric="Options_Startup_NewTab">
+        <span>
+        <span i18n-content="browsermode_speed"></span>
+        <span class="controlled-setting-indicator"
+        pref="browser.browsing_mode" value="0"></span>
+        </span>
+        </label>
+        </div>
+        <div class="radio controlled-setting-with-label">
+        <label>
+        <input type="radio" name="browsermode" value="2"
+        pref="browser.browsing_mode"
+        metric="Options_Startup_NewTab">
+        <span>
+        <span i18n-content="browsermode_safe"></span>
+        <span class="controlled-setting-indicator"
+        pref="browser.browsing_mode" value="2"></span>
+        </span>
+        </label>
+        </div> -->
+       <!--  <div class="radio controlled-setting-with-label">
+        <label>
+        <input type="radio" name="browsermode" value="1"
+        pref="browser.browsing_mode"
+        metric="Options_Startup_NewTab">
+        <span>
+        <span i18n-content="browsermode_both"></span>
+        <span class="controlled-setting-indicator"
+        pref="browser.browsing_mode" value="1"></span>
+        </span>
+        </label>
+        </div> -->
+      <!--   </div>
+        </section> -->
+        <section id="set-addressbar-section">
+          <h3 i18n-content="addressbar">
+          </h3>
+          <div id="set-addressbar-section">
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.address_autofill"><span><span i18n-content="addressbar_autofill"></span><span class="controlled-setting-indicator" pref="browser.address_autofill">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.address_history"><span><span i18n-content="addressbar_showhistory">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="browser.address_history">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.address_saved"><span><span i18n-content="addressbar_showbookmark">
+                  </span><span class="controlled-setting-indicator" pref="browser.address_saved">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.address_copy"><span><span i18n-content="addressbar_copyclip">
+                  </span><span class="controlled-setting-indicator" pref="browser.address_copy"></span></span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" guest-visibility="disabled">
+              <label>
+                <input type="checkbox" pref="browser.compatible_mode"><span><span i18n-content="addressbar_compatibleMode">
+                  </span><span class="controlled-setting-indicator" pref="browser.compatible_mode"></span></span>
+              </label>
+            </div>
+          </div>
+        </section>
+        <section id="set-language-section">
+          <h3 i18n-content="sectionLanguage">
+          </h3>
+          <div id="language-section-content">
+            <select id="language-select" style="margin-left: 0;">
+              <option value="en-GB" i18n-content="language_en"></option>
+              <option value="zh-CN" i18n-content="language_zh-CN"></option>
+              <!-- <option value="zh-TW" i18n-content="language_zh-TW"></option> -->
+            </select>
+            <span i18n-content="language_setting_tip"></span>
+          </div>
+        </section>
+      </div>
+      <div style="min-width: 900px;" id="tab-setting-list" hidden>
+        <!-- not chromeos -->
+        <!-- 标签设置 -->
+        <section id="tabs_settings-section">
+          <h3 i18n-content="tabsettingsGroupName">
+          </h3>
+          <div id="tabs_settings-section">
+            <div class="radio controlled-setting-with-label" id="tabsettings-section">
+              <label>
+                <input type="radio" name="tabmode" value="0" pref="tabs.newtabpageishomepage"><span><span i18n-content="blank tabs">
+                  </span><span class="controlled-setting-indicator" pref="tabs.newtabpageishomepage"
+                  value="0"></span>
+                </span>
+              </label>
+            </div>
+            <div class="radio controlled-setting-with-label">
+              <label>
+                <input type="radio" name="tabmode" value="1" pref="tabs.newtabpageishomepage"><span><span i18n-content="special tabs">
+                  </span><span class="controlled-setting-indicator" pref="tabs.newtabpageishomepage"
+                  value="1"></span></span><input id="homepage_id" class="weakrtl" type="url" data-type="url" pref="homepage">
+              </label>
+            </div>
+          </div>
+        </section>
+        <section id="tabs.self.section">
+          <h3  i18n-content="closetabsetting">
+          </h3>
+          <div id="tabs.self.section">
+            <div class="checkbox controlled-setting-with-label" id="close tabs">
+              <label>
+                <input type="checkbox" pref="browser.closetabmode"><span><span i18n-content="tabsdoubleclicktabs">
+                    </span><span class="controlled-setting-indicator" pref="browser.closetabmode"></span></span>
+              </label>
+            </div>
+                <div class="checkbox controlled-setting-with-label" id="close_reopen_tabs">
+              <label>
+                <input type="checkbox" pref="browser.closereopenlasttabs"><span><span i18n-content="closereopenlasttabs">
+                    </span><span class="controlled-setting-indicator" pref="browser.closereopenlasttabs"></span></span>
+              </label>
+            </div>
+            <div id="close_tabs_switch">
+              <div class="web-content-select-label">
+                <span i18n-content="close_switch_to" >
+                </span>
+                <select id="close_tabs">
+                  <option value="0" i18n-content="smart_switch">
+                  </option>
+                  <option value="1" i18n-content="switch_to_right">
+                  </option>
+                  <option value="2" i18n-content="switch_to_left">
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 i18n-content="open_tabs_settings_head" >
+          </h3>
+          <div>
+            <div class="checkbox controlled-setting-with-label" id="open tabs">
+              <label>
+                <input type="checkbox" pref="browser.opentabs.newtabpage">
+                <span>
+                  <span i18n-content="linktonewtabs">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="browser.opentabs.newtabpage">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input type="checkbox" pref="browser.opentabs.background">
+                <span>
+                  <span i18n-content="openinbackround">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="browser.opentabs.background">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input type="checkbox" pref="browser.opentabs.promtwindow">
+                <span>
+                  <span i18n-content="promptinnewwindow">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="browser.opentabs.promtwindow">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <!--
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input type="checkbox" pref="browser.enable_tab_preview">
+                <span>
+                  <span i18n-content="enbaletabpreview">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="browser.enable_tab_preview">
+                  </span>
+                </span>
+              </label>
+            </div>
+            -->
+            <div id="open_tabs_switch">
+              <div class="web-content-select-label">
+                <span  i18n-content="when_open_tabs">
+                </span><select id="open_tabs">
+                  <option value="0"  i18n-content="open_form_right">
+                  </option>
+                  <option value="1" i18n-content="open_form_all_right" >
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3 i18n-content="TabPreviewName">
+          </h3>
+          <div id="tabs_preview-section">
+            <div class="radio controlled-setting-with-label" id="tabpreview-section">
+              <label>
+                <input type="radio" name="tabpreviewmode" value="1" pref="browser.enable_tab_preview"><span><span i18n-content="always open tab preview">
+                  </span><span class="controlled-setting-indicator" pref="browser.enable_tab_preview"
+                  value="1"></span>
+                </span>
+              </label>
+            </div>
+            <div class="radio controlled-setting-with-label">
+              <label>
+                <input type="radio" name="tabpreviewmode" value="0" pref="browser.enable_tab_preview"><span><span i18n-content="don't open tab preview">
+                  </span><span class="controlled-setting-indicator" pref="browser.enable_tab_preview"
+                  value="0"></span>
+                </span>
+              </label>
+            </div>
+            <div class="radio controlled-setting-with-label">
+              <label>
+                <input type="radio" name="tabpreviewmode" value="2" pref="browser.enable_tab_preview">
+                <span><span i18n-content="open tab preview when tab index less than"></span>
+                  <span class="controlled-setting-indicator" pref="browser.enable_tab_preview" value="2"></span>
+                </span>
+                 <input id="tab_index" class="weakrtl" pref="tab.maxindex" type="number"
+                  min="10" max="150" style=" width: 66px; margin-right: 10px;" readonly="readonly">
+                  <span i18n-content="pixel"></span>
+                <label style=" color: #999999;"  i18n-content="tab_index_note">
+                </label>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="download-setting-list" hidden="">
+        <!-- 下载设置 -->
+        <section id="downloads-section">
+          <h3 i18n-content="downloadLocationGroupName">
+          </h3>
+          <div id="downloads-section">
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input type="checkbox" pref="download.prompt_for_download" metric="Options_AskForSaveLocation">
+                <span>
+                  <span i18n-content="downloadLocationAskForSaveLocation">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.prompt_for_download">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <label>
+                <span id="download-location-label" i18n-content="downloadLocationBrowseTitle">
+                </span>
+              </label> <input id="downloadLocationPath" class="weakrtl" type="text"
+                readonly> <button id="downloadLocationChangeButton" i18n-content="downloadLocationChangeButton">
+              </button><span class="controlled-setting-indicator" pref="download.default_directory">
+              </span>
+            </div>
+            <div id="auto-open-file-types-section" hidden>
+              <div id="auto-open-file-types-container">
+                <div id="auto-open-file-types-label" class="settings-row" i18n-content="autoOpenFileTypesInfo">
+                </div>
+                <div class="settings-row">
+                  <button id="autoOpenFileTypesResetToDefault" i18n-content="autoOpenFileTypesResetToDefault">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="downloads-section.other">
+          <!-- <h3 i18n-content="downloadLocationGroupName"></h3> -->
+          <h3 i18n-content="others">
+          </h3>
+          <div id="downloads-section.other">
+            <!--
+            <div class="radio controlled-setting-with-label" id="download-speed">
+              <label>
+                <input type="radio" name="downloadmode" value="0" pref="download.isLimitSpeed">
+                <span>
+                  <span i18n-content="Download_Not_Limit_Speed">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.isLimitSpeed"
+                  value="0">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="radio controlled-setting-with-label" id="download-speed">
+              <label>
+                <input type="radio" name="downloadmode" value="1" pref="download.isLimitSpeed">
+                <span>
+                  <span i18n-content="Download_MaxSpeed">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.isLimitSpeed"
+                  value="1">
+                  </span>
+                </span>
+                <input id="download_speed" class="weakrtl" pref="download.maxspeed" type="number"
+              min="1" max="9999" style=" width: 66px; margin-right: 10px;" readonly="readonly">
+                <label>KB/S</label>
+                <label style=" color: #999999;"  i18n-content="download_speed_note">
+                </label>
+              </label>
+            </div>
+            -->
+            <div class="checkbox controlled-setting-with-label" id="disable-drive-row">
+              <label>
+                <input type="checkbox" pref="download.quitnotice">
+                <span>
+                  <span i18n-content="Donwnload_task_notice">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.quitnotice">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" id="disable-drive-row">
+              <label>
+                <input type="checkbox" pref="download.finishnotice">
+                <span>
+                  <span i18n-content="Download_prompt_window">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.finishnotice">
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label" id="disable-drive-row">
+              <label>
+                <input type="checkbox" pref="download.lastsession">
+                <span>
+                  <span i18n-content="Download_In_Last_Session">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="download.lastsession">
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="shortcut-setting-list" hidden="">
+        <!-- 快捷键设置 -->
+        <!-- 快捷键 -->
+        <include src="shortcut.html">
+      </div>
+      <div id="more-setting-list" hidden="">
+        <!-- 字体设置 -->
+        <section id="web-content-section">
+          <h3 i18n-content="advancedSectionTitleContent">
+          </h3>
+          <div>
+            <div class="settings-row" style="margin-bottom: 8px;">
+              <label class="web-content-select-label">
+                <span i18n-content="defaultFontSizeLabel">
+                </span>
+              </label>
+              <span id="font-size-indicator" class="controlled-setting-indicator">
+              </span>
+              <button id="fontSettingsCustomizeFontsButton" i18n-content="fontSettingsCustomizeFontsButton">
+              </button>
+            </div>
+            <div class="settings-row" guest-visibility="disabled">
+              <label class="web-content-select-label">
+                <span i18n-content="defaultZoomFactorLabel">
+                </span>
+                <select id="defaultZoomFactor" dataType="double">
+                </select>
+              </label>
+            </div>
+          </div>
+        </section>
+        <!-- 缓存设置 -->
+        <section id="cache-section">
+          <h3 i18n-content="CacheSettings">
+          </h3>
+          <div id="cache-section">
+            <div>
+              <div class="settings-row">
+                <label style=" margin-left: 0px;">
+                  <span id="cache-location-label" i18n-content="CacheDirSettings">
+                  </span></label><input id="CacheLocationPath" class="weakrtl" type="text" readonly>
+                </label><button id="cacheLocationChangeButton" i18n-content="downloadLocationChangeButton">
+                </button><span class="controlled-setting-indicator" pref="browser.disk_cache_dir">
+                </span>
+              </div>
+              <div>
+                  <span  i18n-content="change_cache_path_notes">
+                  </span><a is="action-link" id="resetcacheLocationChangeButton" style="text-decoration:underline "   style=" color: #4381cf;"
+                  i18n-content="CacheDirReset">
+                  </a>
+                  <!-- <button id="resetcacheLocationChangeButton" i18n-content="CacheDirReset">
+                  </button> -->
+                </label>
+              </div>
+              <div class="checkbox controlled-setting-with-label">
+                <label>
+                  <input type="checkbox" pref="browser.disk_cache_auto_clear" metric="Options_AskForSaveLocation">
+                  <span>
+                    <span i18n-content="CacheAutoClear">
+                    </span>
+                    <span class="controlled-setting-indicator" pref="browser.disk_cache_auto_clear">
+                    </span>
+                  </span>
+                  <input id="CacheSize" class="weakrtl" pref="browser.max_disk_cache_size"
+                  type="number" min="100" max="9999" style=" width: 66px;"  readonly>
+                  <span i18n-content = "change_cache_path_notes_1"></span><span  style = " color: #999999;" i18n-content = "change_cache_path_notes_2"></span>
+              </div>
+              <div>
+                <span i18n-content="change_cache_path_notes_3">
+                </span>
+              </div>
+              <div id="auto-open-file-types-section" hidden>
+                <div id="auto-open-file-types-container">
+                  <div id="auto-open-file-types-label" class="settings-row" i18n-content="autoOpenFileTypesInfo">
+                  </div>
+                  <div class="settings-row">
+                    <button id="autoOpenFileTypesResetToDefault" i18n-content="autoOpenFileTypesResetToDefault">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 更多设置 -->
+        <section id="privacy-section">
+          <h3 i18n-content="advancedSectionTitlePrivacy">
+          </h3>
+          <div>
+            <div class="settings-row">
+              <button style=" margin-left: 0px;" id="privacyContentSettingsButton" i18n-content="privacyContentSettingsButton">
+              </button>
+              <button id="privacyClearDataButton" i18n-content="privacyClearDataButton">
+              </button>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input id="do-not-track-enabled" pref="enable_do_not_track" metric="Options_DoNotTrackCheckbox"
+                type="checkbox" dialog-pref>
+                <span i18n-content="doNotTrack">
+                </span>
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input id="privacy-protocal-enabled" pref="enable_privacy_protocal"
+                type="checkbox"  dialog-pref>
+                <span>
+                <span i18n-content="enablePrivacyProtocal">  </span >
+                  <span  class="controlled-setting-indicator"
+                       pref="enable_privacy_protocal">
+                  </span>
+                </span>
+
+              </label>
+            </div>
+
+            <div id="hotword-search" hidden>
+              <div class="checkbox controlled-setting-with-label">
+                <label>
+                  <input id="hotword-search-enable" pref="hotword.search_enabled_2" metric="Options_HotwordCheckbox"
+                  type="checkbox" dialog-pref>
+                  <span>
+                    <span i18n-values=".innerHTML:hotwordSearchEnable">
+                    </span>
+                    <span id="hotword-search-setting-indicator" pref="hotword.search_enabled_2"
+                    dialog-pref>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--prerender settings-->
+         <section id="prerender-settings-section">
+           <h3 i18n-content="prerenderSettingsSectionTitle"></h3>
+           <div>
+             <div class="checkbox controlled-setting-with-label">
+               <label>
+                 <input type="checkbox"
+                     pref="browser.enable_click_prerender">
+                 <span>
+                   <span i18n-content="enableclickprerender"></span>
+                   <span class="controlled-setting-indicator"
+                       pref="browser.enable_click_prerender">
+                   </span>
+                 </span>
+               </label>
+             </div>
+             <div class="checkbox controlled-setting-with-label">
+               <label>
+                 <input type="checkbox"
+                     pref="browser.enable_mouse_over_prerender">
+                 <span>
+                   <span i18n-content="enablemouseoverprerender"></span>
+                   <span class="controlled-setting-indicator"
+                       pref="browser.enable_mouse_over_prerender">
+                   </span>
+                 </span>
+               </label>
+             </div>
+
+             <div class="checkbox controlled-setting-with-label">
+               <label>
+                <input id="gpu-enabled" pref="hardware_acceleration_mode.enabled" type="checkbox">
+                  <span i18n-content="enableGPU"></span>
+                  <span class="controlled-setting-indicator"
+                       pref="hardware_acceleration_mode.enabled">
+                  </span>
+               </label>
+             </div>
+
+           </div>
+         </section>
+        <!-- 密码和表单 -->
+        <section id="password.section">
+          <h3 i18n-content="passwordsAndAutofillGroupName">
+          </h3>
+          <div class="checkbox controlled-setting-with-label">
+            <div id="password.section">
+              <label>
+                <input id="autofill-enabled" pref="autofill.enabled" metric="Options_FormAutofill"
+                type="checkbox">
+                <span>
+                  <span i18n-content="autofillEnabled">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="autofill.enabled">
+                  </span>
+                </span>
+              </label>
+              <a is="action-link" id="autofill-settings" style="text-decoration:underline"
+              i18n-content="manageAutofillSettings">
+              </a>
+            </div>
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input id="password-manager-enabled" pref="profile.password_manager_enabled"
+                metric="Options_PasswordManager" type="checkbox">
+                <span>
+                  <span i18n-content="passwordManagerEnabled">
+                  </span>
+                  <span class="controlled-setting-indicator" pref="profile.password_manager_enabled">
+                  </span>
+                </span>
+              </label>
+              <a is="action-link" id="manage-passwords" style="text-decoration:underline"
+              i18n-content="managePasswords">
+              </a>
+            </div>
+            <if expr="is_macosx">
+              <div id="mac-passwords-warning" i18n-content="macPasswordsWarning" hidden>
+              </div>
+            </if>
+          </div>
+        </section>
+        <!-- 网页工具条 -->
+        <section id="webToolbar.section">
+          <h3 i18n-content="webToolbarGroupName">
+          </h3>
+          <div class="checkbox controlled-setting-with-label">
+            <div id="videoToolbar.section">
+              <label>
+                <input id="videoToolbar-enabled" pref="browser.videoToolbar"
+                type="checkbox">
+                <span i18n-content="videoToolbarEnabled">
+                </span>
+              </label>
+            </div>
+            <div class="checkbox controlled-setting-with-label">
+              <label>
+                <input id="copy-search-enabled" pref="browser.copySearch"
+                type="checkbox">
+                <span i18n-content="copySearchEnabled">
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section id="easy-unlock-section" guest-visibility="hidden" hidden>
+          <h3 i18n-content="easyUnlockSectionTitle">
+          </h3>
+          <!-- Options shown when the user has not set up Easy Unlock -->
+          <div id="easy-unlock-disabled" hidden>
+            <div class="settings-row">
+              <span i18n-content="easyUnlockSetupIntro">
+              </span>
+              <a target="_blank" i18n-content="learnMore" i18n-values="href:easyUnlockLearnMoreURL">
+              </a>
+            </div>
+            <button id="easy-unlock-setup-button" i18n-content="easyUnlockSetupButton">
+            </button>
+          </div>
+          <!-- Options shown when the user has set up Easy Unlock -->
+          <div id="easy-unlock-enabled" hidden>
+            <div class="settings-row">
+              <span i18n-content="easyUnlockDescription">
+              </span>
+              <a target="_blank" i18n-content="learnMore" i18n-values="href:easyUnlockLearnMoreURL">
+              </a>
+              <div id="easy-unlock-enable-proximity-detection" class="checkbox" hidden>
+                <label>
+                  <input type="checkbox" metric="Options_EasyUnlockRequireProximity" pref="easy_unlock.proximity_required">
+                  <span i18n-content="easyUnlockRequireProximityLabel">
+                  </span>
+                </label>
+              </div>
+            </div>
+            <button id="easy-unlock-turn-off-button" i18n-content="easyUnlockTurnOffButton">
+            </button>
+          </div>
+        </section>
+        <section id="certificates-section">
+          <h3 i18n-content="advancedSectionTitleCertificates"></h3>
+          <div>
+            <if expr="use_nss_certs or is_win or is_macosx">
+              <div class="settings-row">
+                <button id="certificatesManageButton"
+                        i18n-content="certificatesManageButton"></button>
+              </div>
+            </if>
+          </div>
+        </section>
+        <section id="update-settings-section">
+          <h3 i18n-content="updateSettingsSectionTitle"></h3>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" pref="browser.auto_update_to_latest">
+              <span i18n-content="autoUpdateLatestVersion"></span>
+            </label>
+          </div>
+        </section>
+        <section id="reset-profile-settings-section">
+          <h3 i18n-content="resetProfileSettingsSectionTitle">
+          </h3>
+          <div>
+            <span class="settings-row" i18n-content="resetProfileSettingsDescription">
+            </span>
+            <button style=" margin-left: 0px;" id="reset-profile-settings" i18n-content="resetProfileSettings">
+            </button>
+          </div>
+        </section>
+        <!-- </div> advanced-settings-container
+        </div> advanced-settings -->
+      </div>
+      <!-- <footer id="advanced-settings-footer" hiddens>
+      <a is="action-link" id="advanced-settings-expander"
+      i18n-content="showAdvancedSettings"></a>
+      </footer> -->
+  </div>
+  </body>
+
+</html>

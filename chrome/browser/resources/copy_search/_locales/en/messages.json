@@ -1,0 +1,10 @@
+{
+  "search" : {
+    "message" : "Search",
+    "description" : "Text for search button"
+  },
+  "copy" : {
+    "message" : "Copy",
+    "description" : "Text for copy button"
+  }
+}

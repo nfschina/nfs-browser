@@ -1,0 +1,130 @@
+<!doctype html>
+<html i18n-values="dir:textdirection;lang:language">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="nfsbrowser://resources/js/cr.js"></script>
+<script src="nfsbrowser://resources/js/load_time_data.js"></script>
+<script src="nfsbrowser://resources/js/util.js"></script>
+<script src="strings.js"></script>
+
+<style>
+
+body {
+	font-size: 12px;
+	line-height: 24px;
+	color:#333;
+	-webkit-user-select: none;
+}
+
+body, div, p, span {
+	margin: 0;
+	padding: 0;
+}
+
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.aboutwrap{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+}
+
+.aboutmain{
+	height:290px;
+	width:520px;
+	position:relative;
+}
+
+.aboutmain .logo{
+	height:110px;
+	background:url(img/aboutlogo.png) no-repeat center;
+}
+.aboutmain .info{
+	padding-top:15px;
+	text-align:center;
+	color:#666;
+	}
+
+.aboutmain h6{
+	font-size: 16px;
+	line-height: 40px;
+	font-weight:100;
+	color:#333;
+	 line-height: 22px;
+}
+
+.aboutmain p{
+	font-size: 12px;
+	line-height: 26px;
+	}
+.version_info{
+
+}
+.aboutmain .version:after{
+	content:"|";
+	margin:0 12px;
+	color:#999;
+	}
+.aboutmain .decription{
+	margin-top: 18px;
+}
+.aboutmain .footer{
+	position: absolute;
+	left: 12px;
+	bottom: 36px;
+	color:#999;
+}
+
+.aboutmain .footer_chromium{
+  position: absolute;
+  left: 12px;
+  bottom: 19px;
+  color:#999;
+}
+
+.aboutmain .footer_help{
+  position: absolute;
+  left: 12px;
+  bottom: 2px;
+  color:#999;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="aboutwrap"> 
+        <div class="aboutmain">            
+            <div class="logo">
+            </div>
+            <div class="info">               
+                <h6 id="windows_os" i18n-content="nfsbrowser"></h6>
+                <h6 id="linux_os" style="display:none" i18n-content="basicbrowser"></h6>
+                <p class="version_info"><span class="version"></span><span class="core"></span></p>
+                <p class="decription" i18n-content="nfsbrowser_decription"></p>
+                <p class="footer" i18n-content="nfsbrowser_copyright"></p>
+                <span class="footer_chromium">方德基础浏览器的诞生离不开<span id="help_chromium" style="cursor:pointer;color:blue;">Chromium</span><span>开源项目以及其他<span id="help_opensource" style="cursor:pointer;color:blue;">开源软件</span></span></span>
+                <br>
+                <span class="footer_help">方德基础浏览器<span id="help_help" style="cursor:pointer;color:blue;">服务条款</span></span>
+            </div>     
+        </div>    
+    </div>
+
+    <script src="get_version.js" type="text/javascript"></script>
+    <script src="nfsbrowser://resources/js/i18n_template.js"></script>
+    <script src="nfsbrowser://resources/js/jstemplate_compiled.js"></script>
+</body>
+</html>

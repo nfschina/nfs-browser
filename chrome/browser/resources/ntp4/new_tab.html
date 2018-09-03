@@ -1,0 +1,80 @@
+<!--
+
+ * Copyright (c) 2016-2018 CPU and Fundamental Software Research Center, CAS
+ *
+ * This software is published by the license of CPU-OS Licence, you can use and
+ * distribute this software under this License. See CPU-OS License for more detail.
+ *
+ * You should have received a copy of CPU-OS License. If not, please contact us
+ * by email <support_os@cpu-os.ac.cn>
+
+-->
+
+<!doctype html>
+<html class="starting-up" i18n-values="dir:textdirection;
+                                       lang:language">
+
+<head>
+  <meta charset="utf-8">
+  <title i18n-content="title"></title>
+
+  <link rel="stylesheet" href="nfsbrowser://resources/css/tree.css">
+
+  <link rel="stylesheet" href="nfsbrowser://theme/css/new_tab.css">
+
+  <script src="nfsbrowser://resources/js/event_tracker.js"></script>
+
+  <script src="nfsbrowser://resources/js/cr.js"></script>
+  <script src="nfsbrowser://resources/js/cr/ui.js"></script>
+  <script src="nfsbrowser://resources/js/cr/ui/tree.js"></script>
+  <script src="nfsbrowser://resources/js/util.js"></script>
+
+  <script src="jquery.js"></script>
+  <script src="jquery.dragsort-0.5.2.min.js"></script>
+  <script src="new_tab.js"></script>
+</head>
+
+<body>
+  <!-- 编辑框 -->
+  <div id='edit-page'></div>
+
+  <div id="start-index">
+    <div id='search-box'></div>
+    <!-- 网址导航 -->
+    <div id='ntp-content'>
+      <ul id="pages">
+        <li index="0"></li>
+        <li index="1"></li>
+        <li index="2"></li>
+        <li index="3"></li>
+        <li index="4"></li>
+        <li index="5"></li>
+        <li index="6"></li>
+        <li index="7"></li>
+      </ul>
+    </div>
+
+    <div id='search-content'></div>
+
+    <!-- 联想框 -->
+    <div id="keyword"></div>
+
+  </div>
+
+  <!-- 右键菜单 -->
+  <div id="context-menu">
+    <ul>
+      <li index='0' i18n-content="open_in_new_tab"></li>
+      <li index='1' i18n-content="open_in_new_window"></li>
+      <li index='2' i18n-content="open_incognito_window"></li>
+      <li index='5' class="solid"></li>
+      <li index='3' i18n-content="edit"></li>
+      <li index='4' i18n-content="delete"></li>
+    </ul>
+  </div>
+
+  <!-- 错误信息 -->
+  <div id="message" style="display: none; opacity: 1"></div>
+</body>
+
+</html>

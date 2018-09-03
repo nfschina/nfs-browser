@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "bundle.js" ],
+      "persistent": false
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "toolbar.js" ],
+      "matches": [ "*://*.qq.com/*", "*://*.tudou.com/*", "*://*.sohu.com/*", "*://*.56.com/*", "*://*.le.com/*", "*://*.iqiyi.com/*", "*://*.pptv.com/*", "*://*.youku.com/*", "*://*.youtube.com/*", "*://*.douyutv.com/*", "*://*.douyu.com/*", "*://*.panda.tv/*", "*://*.laifeng.com/*", "*://*.bobo.com/*", "*://*.huya.com/*", "*://*.quanmin.com/*", "*://*.longzhu.com/*", "*://*.pps.tv/*", "*://*.chushou.com/*", "*://*.kankan.com/*", "*://*.bilibili.com/*", "*://*.acfun.cn/*", "*://*.aixifan.com/*", "*://*.ifeng.com/*", "*://*.miaopai.com/*", "*://*.sina.com.cn/*", "*://*.163.com/*", "*://*.chinaz.com/*", "*://*.boosj.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "externally_connectable": {
+      "matches": [ "*://*.qq.com/*", "*://*.tudou.com/*", "*://*.sohu.com/*", "*://*.56.com/*", "*://*.le.com/*", "*://*.iqiyi.com/*", "*://*.pptv.com/*", "*://*.youku.com/*", "*://*.youtube.com/*", "*://*.douyutv.com/*", "*://*.douyu.com/*", "*://*.panda.tv/*", "*://*.laifeng.com/*", "*://*.bobo.com/*", "*://*.huya.com/*", "*://*.quanmin.com/*", "*://*.longzhu.com/*", "*://*.pps.tv/*", "*://*.chushou.com/*", "*://*.kankan.com/*", "*://*.bilibili.com/*", "*://*.acfun.cn/*", "*://*.aixifan.com/*", "*://*.ifeng.com/*", "*://*.miaopai.com/*", "*://*.sina.com.cn/*", "*://*.163.com/*", "*://*.chinaz.com/*", "*://*.boosj.com/*" ]
+   },
+
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArzT7IlhskIIOkleGjTE1jr/TAvtDXlvdfJepapeCActjQ2kyoHtUWuw7vdI1rWA8BoSWArrxXY+MIPqAfeentHOnMR6cC5DNC9sKhnHZ+tmgZrH/9HAZ4a+qNzDpNW5ZEOX0dxoF869L9FYIW1lPBq970X6FiJXxH0m63HFPNYtmIbYlYlYsEnufS2Tm3h6r6ide3tUIPrOQJaRnhZcTKRtAvTVV05Pu8UsbFE5OV4od/dUxgYNZRunXgehPE2hmPYbiESxwTowhZC73uh8IMZ68TK/fBDMRl0+6gYLCXcFudV44WX8bqaLL/C6hHnGByQqrBwtKCWQnu44UlfutHQIDAQAB",
+   "manifest_version": 2,
+   "name": "小窗口播放",
+   "permissions": [ "tabs", "nfs.video", "accessPreference" ],
+   "version": "2.2.2"
+}

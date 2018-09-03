@@ -1,0 +1,155 @@
+/* Copyright 2014 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+/* This is a common file for pages that have a title and search box as their
+ * header. This visually looks like:
+ * _____________________________________________________________________________
+ * |                                                                           |
+ * |  I Am So Great!                                  [ Search greatness... ]  |
+ * |___________________________________________________________________________|
+ * | Summary (90235 things currently great)                      _Great links_ |
+ *
+ * The title expands to fill any space it needs and the search bar is locked to
+ * the end of the header (e.g., right in LTR, left in RTL).
+ */
+
+header,
+.summary {
+  min-width: 400px;
+}
+
+/*
+header {
+  align-items: center;
+  display: flex;
+  padding: 0 12px;
+}
+
+
+
+header h1 {
+  flex: 1;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 15px 0;
+}
+
+header > :-webkit-any(form, input[type='search']) {
+  flex: none;
+}
+
+input[type='search'] {
+  border-radius: 25px;
+  width: 200px;
+  height: 30px;
+}
+
+header button {
+  width: 100px;
+  height: 30px;
+}
+
+*/
+
+header {
+  display: flex;
+  height: 72px;
+  font-size: 14px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  color: rgb(51, 51, 51);
+  align-items: center;
+  min-width: 1200px;
+}
+
+
+header h1 {
+  font-size: 24px;
+  font-weight: normal;
+  color: rgb(51, 51, 51);
+  line-height: 72px;
+  width: 280px;
+  min-width: 280px;
+  text-indent: 1em;
+  font-family: Arial;
+}
+
+
+header .operation-button {
+  flex: 1;
+  text-align: left;
+  margin-left: 20px;
+  /*height: 28px;*/
+  color: rgb(221, 221, 221);
+  vertical-align: middle;
+}
+
+header .operation-button button {
+  margin: 0 10px;
+  line-height: 28px;
+  padding: 5px 12px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 4px;
+  background: rgb(255, 255, 255) !important;
+}
+
+header .operation-button button:hover {
+  /*background-color: rgb(242, 243, 245);*/
+}
+
+
+header form {
+  width:192px;
+  /*height: 28px;*/
+  line-height:28px;
+  color: rgb(187, 187, 187);
+  padding:0 12px;
+  border-radius:13px;
+  border:1px solid rgb(187, 187, 187);
+  display: flex;
+  align-items: center;
+}
+
+#term {
+  flex: 1;
+  height:24px;
+  line-height:24px;
+  /*margin-left: 6px;*/
+  /*padding:0 !important;*/
+  border:0 none;
+}
+
+header form label {
+  width: 16px;
+  height:16px;
+  vertical-align:text-bottom;
+  cursor:pointer;
+  background:
+    url(../images/bookmark_manager_icons.png) no-repeat 0 -180px;
+}
+
+
+
+.summary {
+  background-color: rgb(235, 239, 249);
+  border-top: 1px solid rgb(156, 194, 239);
+  display: flex;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.summary > * {
+  flex: none;
+}
+
+.summary > :first-child {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,14 @@
+{
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": ["main.js"],
+    "css": [],
+    "matches": ["<all_urls>"],
+    "run_at": "document_end"
+  } ],
+
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLoJQBo6zyWJS2WIO8CB51ossu+9arHZmNny02h/L3MPSApXvOZ+HlczgM+Zy0sGZzlXBIeC82fUXqxl+2SDHuUAQGN5FhzO8icttrJRapkm7dFLqE6D/Uob0qK+uVRk0HcuHfpKXK4PQ63ZD4aAXbrCVbo5D6Dlw7JrS/3uFF3wIDAQAB",
+  "manifest_version": 2,
+  "name": "dom-compatible",
+  "version": "1.0.0"
+}

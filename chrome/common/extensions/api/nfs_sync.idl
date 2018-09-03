@@ -1,0 +1,30 @@
+// Copyright (c) 2013 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// The <code>chrome.nfs.sync</code> API is provided to inform browser the user
+// login successed.
+namespace nfs.sync {
+
+  callback ResultCallback = void(boolean result);
+  callback ErrorCallback = void(optional Error error);
+
+  dictionary Error {
+    long error_code;
+    DOMString error_msg;
+  };
+
+  dictionary Info {
+    DOMString name;
+    DOMString id;
+    DOMString? email;
+  };
+
+  interface Functions {
+    // Inform the browser of the result of the login
+    static void nfsUserLogin(Info info,
+                             ErrorCallback callback);
+
+    static void isLogin(ResultCallback callback);
+  };
+};
