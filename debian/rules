@@ -1,0 +1,122 @@
+#!/usr/bin/make -f
+
+DEBIAN_NAME              := nfs-browser
+CUR_VERSION              := 5.1.0.2080
+
+DEB_HOST_ARCH            ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_MULTIARCH       ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DEB_HOST_ARCH_CPU        ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
+DEB_BUILD_ARCH           ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+DEB_BUILD_ARCH_BITS      ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH_BITS)
+
+SHELL                    := /bin/bash
+
+SRC_DIR                   = $(CURDIR)
+OUT_DIR                   = $(CURDIR)/out
+ICONS_DIR                 = $(CURDIR)/debian/icons
+OUT_DEFAULT_DIR           = $(OUT_DIR)/Release
+TARGET_EXE_NAME           = nfs-browser
+SANDBOX_EXE_NAME          = nfsbrowser_sandbox
+UPDATER_EXE_NAME          = nfs-browser-up
+LAUNCHER_EXE_NAME         = nfs-browser-launcher
+DEBIAN_TMP_DIR            = $(CURDIR)/debian/nfs-browser
+INSTALL_DIR               = $(DEBIAN_TMP_DIR)/opt/nfs-browser
+EXE_LINK_PATH             = $(DEBIAN_TMP_DIR)/usr/bin
+DESKTOP_FILE_DIR          = $(DEBIAN_TMP_DIR)/usr/share/applications
+VERSION_DIR               = $(INSTALL_DIR)/$(CUR_VERSION)
+LANGUAGES_DIR             = $(VERSION_DIR)/locales
+DEPOT_TOOLS_PATH          = $(CURDIR)/depot_tools
+
+DESKTOP_FILE_PATH         = $(CURDIR)/debian/nfs-browser.desktop
+TARGET_EXE_PATH           = $(OUT_DEFAULT_DIR)/$(TARGET_EXE_NAME)
+LAUNCHER_EXE_PATH         = $(OUT_DEFAULT_DIR)/$(LAUNCHER_EXE_NAME)
+SANDBOX_EXE_PATH          = $(OUT_DEFAULT_DIR)/$(SANDBOX_EXE_NAME)
+UPDATER_EXE_PATH          = $(OUT_DEFAULT_DIR)/$(UPDATER_EXE_NAME)
+
+export PATH              := $(DEPOT_TOOLS_PATH):$(PATH)
+
+generate_project:
+	mkdir -p depot_tools
+	unzip -qo depot_tools.zip -d depot_tools
+	python tools/install_tools.py
+	gn gen out/Release --args='is_component_build=false is_debug=false enable_linux_installer=false enable_nacl=false enable_nacl_nonsfi=false ffmpeg_branding="Chrome" proprietary_codecs=true safe_browsing_mode=0 is_official_build=false is_development_mode=false is_component_ffmpeg=true'
+
+build_project:
+	echo $(CURDIR)
+	ninja -C out/Release $(TARGET_EXE_NAME) $(SANDBOX_EXE_NAME)
+	cp $(OUT_DEFAULT_DIR)/libnfs_browser.so ../nfs-browser.log
+	strip $(TARGET_EXE_PATH)
+	strip $(OUT_DEFAULT_DIR)/libblink_core.so
+	strip $(OUT_DEFAULT_DIR)/libnfs_browser.so
+	strip $(OUT_DEFAULT_DIR)/libv8.so
+	strip $(OUT_DEFAULT_DIR)/libcurl.so
+	strip $(OUT_DEFAULT_DIR)/libffmpeg.so
+copy_files:
+	echo "Prepare package"
+	dh_testdir
+	dh_testroot
+	dh_prep -k
+	mkdir -p $(DEBIAN_TMP_DIR)
+	mkdir -p $(INSTALL_DIR)
+	mkdir -p $(VERSION_DIR)
+	mkdir -p $(DESKTOP_FILE_DIR)
+	mkdir -p $(EXE_LINK_PATH)
+	mkdir -p $(LANGUAGES_DIR)
+	mkdir -p $(VERSION_DIR)/Murl
+	mkdir -p $(VERSION_DIR)/extensions
+	mkdir -p $(DEBIAN_TMP_DIR)/usr/lib/mozilla/plugins
+	mkdir -p $(INSTALL_DIR)/lib
+	mkdir -p $(INSTALL_DIR)/share
+
+	cp $(DESKTOP_FILE_PATH) $(DESKTOP_FILE_DIR)
+	cp -r $(ICONS_DIR) $(INSTALL_DIR)
+	cp $(LAUNCHER_EXE_PATH) $(INSTALL_DIR)/nfs-browser
+	cp $(SANDBOX_EXE_PATH) $(INSTALL_DIR)/nfsbrowser-sandbox
+	cp $(TARGET_EXE_PATH) $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/libblink_core.so $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/libnfs_browser.so $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/libv8.so $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/libcurl.so $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/libffmpeg.so $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/natives_blob.bin $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/snapshot_blob.bin $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/xdg-mime $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/xdg-settings $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/browser_100_percent.pak $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/browser_200_percent.pak $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/resources.pak $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/icudtl.dat $(VERSION_DIR)
+	cp $(OUT_DEFAULT_DIR)/Murl/murl.db $(VERSION_DIR)/Murl
+	cp -r $(OUT_DEFAULT_DIR)/extensions $(VERSION_DIR)
+	cp -r $(OUT_DEFAULT_DIR)/locales/en-GB.pak $(LANGUAGES_DIR)
+	cp -r $(OUT_DEFAULT_DIR)/locales/en-US.pak $(LANGUAGES_DIR)
+	cp -r $(OUT_DEFAULT_DIR)/locales/zh-CN.pak $(LANGUAGES_DIR)
+	cp -r $(OUT_DEFAULT_DIR)/locales/zh-TW.pak $(LANGUAGES_DIR)
+	cd $(EXE_LINK_PATH) && ln -s /opt/nfs-browser/nfs-browser nfs-browser
+
+	cp $(LAUNCHER_EXE_PATH) $(INSTALL_DIR)/new_nfs-browser
+	cd $(INSTALL_DIR) && zip -rq $(CURDIR)/../nfs-browser_$(CUR_VERSION).zip $(CUR_VERSION) new_nfs-browser
+	rm $(INSTALL_DIR)/new_nfs-browser
+
+
+build: generate_project build_project
+
+clean:
+	rm -rf $(DEBIAN_TMP_DIR)
+	rm -rf $(DEPOT_TOOLS_PATH)
+
+binary-arch: copy_files
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-indep: copy_files
+
+binary: binary-indep binary-arch

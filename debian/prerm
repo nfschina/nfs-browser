@@ -1,0 +1,57 @@
+#!/bin/sh
+#
+# Copyright (c) 2009 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Keep the previous configuration on an update
+if [ "$1" != "upgrade" ]; then
+  nfs-pipelight-plugin --disable-all
+
+  if [ -e "/opt/nfs-browser/share/nfs-pipelight/sandbox" ] || [ -L "/opt/nfs-browser/share/nfs-pipelight/sandbox" ]; then
+    rm "/opt/nfs-browser/share/nfs-pipelight/sandbox"
+  fi
+fi
+
+set -e
+
+if [ -f "/opt/nfs-browser/new_nfs-browser" ]; then
+  rm /opt/nfs-browser/new_nfs-browser
+fi
+
+action="$1"
+if [ "$2" = "in-favour" ]; then
+  # Treat conflict remove as an upgrade.
+  action="upgrade"
+fi
+# Don't clean-up just for an upgrade.`
+# if [ "$action" = "upgrade" ] ; then
+#   exit 0
+# fi
+
+# Remove icons from the system icons
+XDG_ICON_RESOURCE="`which xdg-icon-resource 2> /dev/null || true`"
+if [ ! -x "$XDG_ICON_RESOURCE" ]; then
+  echo "Error: Could not find xdg-icon-resource" >&2
+  exit 1
+fi
+for icon in "/opt/nfs-browser/icons/product_logo_"*.png; do
+  size="${icon##*/product_logo_}"
+  "$XDG_ICON_RESOURCE" uninstall --size "${size%.png}" "nfs-browser"
+done
+
+UPDATE_MENUS="`which update-menus 2> /dev/null || true`"
+if [ -x "$UPDATE_MENUS" ]; then
+  update-menus
+fi
+
+# Update cache of .desktop file MIME types. Non-fatal since it's just a cache.
+update-desktop-database > /dev/null 2>&1 || true
+
+# Remove from the alternatives system
+update-alternatives --remove x-www-browser /usr/bin/nfs-browser
+update-alternatives --remove gnome-www-browser /usr/bin/nfs-browser
+
+#update-alternatives --remove google-chrome /usr/bin/chromium-browser-stable
+
+rm -rf /opt/nfs-browser

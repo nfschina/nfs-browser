@@ -1,0 +1,12 @@
+executable("launcher") {
+  output_name = "nfs-browser-launcher"
+
+  sources = [
+    "launcher.cc"
+  ]
+
+  deps = [
+    "//base",
+    "//components/version_info",
+  ]
+}

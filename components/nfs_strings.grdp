@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grit-part>
+  <message name="IDS_LAST_TABS_LIST_UI_TITLE" desc="the title of cdosbrowser://last_tabs_list/">
+    The page has not been closed recently
+  </message>
+</grit-part>

@@ -35,4 +35,4 @@ This will create three NuGet packages:
 * the symbols package (debug symbols)
 
 Later, you can push the package to NuGet.org repo.
-Attention: before pusing the resulting nuget package to public nuget repo, you have to be 100% sure it works correctly - there’s no way how to delete or update an already existing package.
+Attention: before pusing the resulting nuget package to public nuget repo, you have to be 100% sure it works correctly - there's no way how to delete or update an already existing package.
