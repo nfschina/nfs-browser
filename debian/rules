@@ -39,6 +39,7 @@ generate_project:
 	mkdir -p depot_tools
 	unzip -qo depot_tools.zip -d depot_tools
 	python tools/install_tools.py
+	./build/install-build-deps.sh
 	gn gen out/Release --args='is_component_build=false is_debug=false enable_linux_installer=false enable_nacl=false enable_nacl_nonsfi=false ffmpeg_branding="Chrome" proprietary_codecs=true safe_browsing_mode=0 is_official_build=false is_development_mode=false is_component_ffmpeg=true'
 
 build_project:

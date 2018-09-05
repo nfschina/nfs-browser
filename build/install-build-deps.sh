@@ -36,8 +36,13 @@ package_exists() {
 # simple for the bot setup if all bots just run the script in its default
 # mode.  Developers who don't want stuff they don't need installed on their
 # own workstations can pass --no-arm --no-nacl when running the script.
-do_inst_arm=1
+do_inst_arm=0
 do_inst_nacl=1
+do_inst_syms=1
+do_inst_lib32=0
+do_inst_chromeos_fonts=0
+do_default=1
+do_quietly="-qq --assume-yes"
 
 while test "$1" != ""
 do
