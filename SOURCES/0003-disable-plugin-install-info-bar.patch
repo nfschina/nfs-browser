@@ -1,0 +1,42 @@
+diff --git a/chrome/browser/plugins/plugin_observer.cc b/chrome/browser/plugins/plugin_observer.cc
+index 5b750ad0f..cd0228781 100644
+--- a/chrome/browser/plugins/plugin_observer.cc
++++ b/chrome/browser/plugins/plugin_observer.cc
+@@ -479,6 +479,7 @@ void PluginObserver::OnCouldNotLoadPlugin(const base::FilePath& plugin_path) {
+ }
+ 
+ void PluginObserver::OnPromptInstallPlugin(const std::string& mime_type) {
++  return;
+   if (mime_type == content::kFlashPluginSwfMimeType ||
+         mime_type == content::kFlashPluginSplMimeType) {
+     PluginInstallInfoBarDelegate::Create(web_contents(),
+diff --git a/chrome/renderer/chrome_content_renderer_client.cc b/chrome/renderer/chrome_content_renderer_client.cc
+index ada861aef..1cb2bd880 100644
+--- a/chrome/renderer/chrome_content_renderer_client.cc
++++ b/chrome/renderer/chrome_content_renderer_client.cc
+@@ -645,8 +645,8 @@ WebPlugin* ChromeContentRendererClient::CreatePlugin(
+     if (orig_mime_type == content::kFlashPluginSwfMimeType ||
+         orig_mime_type == content::kFlashPluginSplMimeType ||
+         orig_mime_type == content::kJavaAppletMimeType) {
+-      render_frame->Send(new ChromeViewHostMsg_PromptInstallPlugin(
+-            render_frame->GetRoutingID(), orig_mime_type));
++      //render_frame->Send(new ChromeViewHostMsg_PromptInstallPlugin(
++      //      render_frame->GetRoutingID(), orig_mime_type));
+     }
+ 
+     PluginUMAReporter::GetInstance()->ReportPluginMissing(orig_mime_type, url);
+diff --git a/content/renderer/render_frame_impl.cc b/content/renderer/render_frame_impl.cc
+index 3264012d6..5555f0316 100644
+--- a/content/renderer/render_frame_impl.cc
++++ b/content/renderer/render_frame_impl.cc
+@@ -1073,8 +1073,8 @@ void RenderFrameImpl::showPluginInstallInfoBar(std::string mime_type) {
+   if (mime_type == content::kFlashPluginSwfMimeType ||
+         mime_type == content::kFlashPluginSplMimeType ||
+         mime_type == content::kJavaAppletMimeType) {
+-      Send(new ChromeViewHostMsg_PromptInstallPlugin(
+-            GetRoutingID(), mime_type));
++      //Send(new ChromeViewHostMsg_PromptInstallPlugin(
++      //      GetRoutingID(), mime_type));
+     }
+ }
+ 

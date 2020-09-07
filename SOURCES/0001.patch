@@ -1,0 +1,13 @@
+diff --git a/third_party/catapult/third_party/py_vulcanize/py_vulcanize/generate.py b/third_party/catapult/third_party/py_vulcanize/py_vulcanize/generate.py
+index 636838006..3702fa357 100644
+--- a/third_party/catapult/third_party/py_vulcanize/py_vulcanize/generate.py
++++ b/third_party/catapult/third_party/py_vulcanize/py_vulcanize/generate.py
+@@ -177,7 +177,7 @@ def _MinifyCSS(css_text):
+       os.path.join(py_vulcanize_path, 'third_party', 'rcssmin', 'rcssmin.py'))
+ 
+   with tempfile.NamedTemporaryFile() as _:
+-    rcssmin_args = ['python', rcssmin_path]
++    rcssmin_args = ['python2', rcssmin_path]
+     p = subprocess.Popen(rcssmin_args,
+                          stdin=subprocess.PIPE,
+                          stdout=subprocess.PIPE,

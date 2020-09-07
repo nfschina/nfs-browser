@@ -1,0 +1,14 @@
+diff --git a/chrome/VERSION b/chrome/VERSION
+index f2aaac530..2c2b14854 100644
+--- a/chrome/VERSION
++++ b/chrome/VERSION
+@@ -1,7 +1,7 @@
+ MAJOR=5
+ MINOR=2
+ BUILD=15
+-PATCH=2664
++PATCH=2665
+ CHROMIUM_MAJOR=55
+ CHROMIUM_MINOR=0
+ CHROMIUM_BUILD=2883
+ 

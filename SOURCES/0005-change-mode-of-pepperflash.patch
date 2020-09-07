@@ -1,0 +1,39 @@
+diff --git a/chrome/VERSION b/chrome/VERSION
+index 2c2b14854..92be0ebea 100644
+--- a/chrome/VERSION
++++ b/chrome/VERSION
+@@ -1,7 +1,7 @@
+ MAJOR=5
+ MINOR=2
+ BUILD=15
+-PATCH=2665
++PATCH=2666
+ CHROMIUM_MAJOR=55
+ CHROMIUM_MINOR=0
+ CHROMIUM_BUILD=2883
+diff --git a/chrome/browser/pepper_flash_install_infobar_delegate.cc b/chrome/browser/pepper_flash_install_infobar_delegate.cc
+index a57376017..2406c1cb6 100644
+--- a/chrome/browser/pepper_flash_install_infobar_delegate.cc
++++ b/chrome/browser/pepper_flash_install_infobar_delegate.cc
+@@ -91,6 +91,8 @@ void PepperFlashInstallInfoBarDelegate::InstallPlugin() {
+     zip::Unzip(download_path, tmp_path);
+     base::CopyDirectory(unzip_path, pepper_flash_base_path, true);
+     base::DeleteFile(unzip_path, true);
++    std::string cmd = "chmod -R a+rwx " + pepper_flash_base_path.value() + "/PepperFlash";
++    system(cmd.c_str());
+   } else {
+     LOG(CDOS)<<"PepperFlash download failed.";
+   }
+diff --git a/chrome/browser/ui/webui/app_manager/app_manager_handler.cc b/chrome/browser/ui/webui/app_manager/app_manager_handler.cc
+index e96235a87..f89afc296 100644
+--- a/chrome/browser/ui/webui/app_manager/app_manager_handler.cc
++++ b/chrome/browser/ui/webui/app_manager/app_manager_handler.cc
+@@ -195,6 +195,8 @@ void AppManagerHandler::InstallPepperFlash() {
+     base::CopyDirectory(unzip_path, pepper_flash_base_path, true);
+     base::DeleteFile(download_path, true);
+     base::DeleteFile(unzip_path, true);
++    std::string cmd = "chmod -R a+rwx " + pepper_flash_base_path.value() + "/PepperFlash";
++    system(cmd.c_str());
+   } else {
+     // If download failed, delete the temporary file.
+     fclose(fp);
